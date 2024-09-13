@@ -1,0 +1,45 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #2b2b2b9d;
+}
+
+/*tamanho fixo do logo no cabeeçalho*/
+header img{
+  width: 80px;
+}
+
+/*tamanho máximo da parte dos textos cabeçalho*/
+nav{
+  max-width: 800px;
+}
+
+/*alinhamento dos textos do cabeçalho*/
+nav ul{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*espaço entre os textos do cabeçalho*/
+nav ul li{
+  margin-left: 20px;
+}
+/*textos do cabeçalho*/
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+/*mudar a cor dos elemntos do cabeçalho ao passar o mouse por cima*/
+nav ul li a:hover {
+  color: #F08F36;
+  text-decoration: underline;
+}
+
