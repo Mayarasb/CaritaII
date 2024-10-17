@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardInformativoComponent } from './card-informativo.component';
+import { ComoajudarPIComponent } from './card-comoajudar-pi.component';
 
-describe('CardInformativoComponent', () => {
-  let component: CardInformativoComponent;
-  let fixture: ComponentFixture<CardInformativoComponent>;
+describe('ComoajudarPIComponent', () => {
+  let component: ComoajudarPIComponent;
+  let fixture: ComponentFixture<ComoajudarPIComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardInformativoComponent]
+      imports: [ComoajudarPIComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CardInformativoComponent);
+    fixture = TestBed.createComponent(ComoajudarPIComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,18 +7,13 @@
 }
 
 .suptexto {
-  font-family: 'Poppins', sans-serif;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.315);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
-  text-align: center;
   padding: 0 20px;
   text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.315);
 }

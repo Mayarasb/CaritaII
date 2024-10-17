@@ -44,6 +44,12 @@ header{
     color: var(--cor-secundaria) !important;
 }
 
+.footer{
+  background-image: radial-gradient( circle, white ,#FFF2E7);
+  width: 100%;
+  margin: 0;
+}
+
 .imgFooter{
   width: 150px;
 

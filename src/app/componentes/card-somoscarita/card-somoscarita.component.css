@@ -1,18 +1,13 @@
 #textog{
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 33px;
+   font-weight: 700;
+   font-size: 33px;
 }
 #textom{
-  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 #textop{
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 15px;
 }
 
@@ -26,19 +21,9 @@
   align-items: center;
 }
 #imgmeiosup{
-  width: 320px;
-
+  width: 428px;
   display: flex;
   
-  align-items: center;
-}
-
-.contmeiosup{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
 }
 
 #botao1{
@@ -50,4 +35,5 @@
   background-color: #F9C89B;
   color: #522916 ;
   font-weight: bold;
+  border: none;
 }

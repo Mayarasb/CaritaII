@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-card-informativo',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './card-informativo.component.html',
-  styleUrl: './card-informativo.component.css'
+  templateUrl: './card-somoscarita.html',
+  styleUrl: './card-somoscarita.component.css'
 })
 export class CardInformativoComponent {
 
@@ -16,7 +16,4 @@ export class CardInformativoComponent {
 
   ]
 
-  comoAjudar : CardsInformativos[] =[
-    {image: '/img/help_5102230.png', title:'Como Ajudar', description:'Descubra os pontos de arrecadação de alimentos ou cadastre sua empresa para auxiliar na doação',button:'Leia Mais'},
-  ]
-}
+  }

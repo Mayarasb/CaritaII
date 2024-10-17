@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { BannerPrincipalComponent } from '../componentes/banner-principal/banner-principal.component';
 import { BannerSecundarioComponent } from '../componentes/banner-secundario/banner-secundario.component';
-import { CardInformativoComponent } from "../componentes/card-informativo/card-informativo.component";
-import { ComoajudarPIComponent } from '../componentes/comoajudar-pi/comoajudar-pi.component';
+import { CardInformativoComponent } from "../componentes/card-somoscarita/card-somoscarita.component";
+import { ComoajudarPIComponent } from '../componentes/card-comoajudar-pi/card-comoajudar-pi.component';
 import { FooterComponent } from '../componentes/footer/footer.component';
 
 @Component({

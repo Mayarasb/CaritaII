@@ -1,13 +1,12 @@
 #textog{
-  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
 #textop{
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-align: justify;
 }
 
 /* CSS Cabeçalho */

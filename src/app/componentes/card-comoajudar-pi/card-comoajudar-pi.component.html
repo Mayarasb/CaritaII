@@ -1,0 +1,17 @@
+<div *ngFor="let CardsInformativos of comoAjudar" class="meioinf">
+  <div class="imgmeioinf">
+      <img src="{{CardsInformativos.image}}" alt="imgmeioinf" id="imgmeioinf">
+  </div>
+  <div class="contmeioinf">
+          <div class="textogmeioinf">
+          <h1 id="textog">{{CardsInformativos.title}}</h1>
+      </div>
+      <div class="textopmeioinf">
+          <p id="textop">{{CardsInformativos.description}}</p>
+      </div>
+      <div class="botaomeioinf">
+          <button class="btn" id="botao" style="font-family:Poppins,sans-serif;font-weight: 700;font-style: normal;"><a href="como_ajudar.html">{{CardsInformativos.button}}</a></button>
+      </div>
+  </div>
+</div>
+
