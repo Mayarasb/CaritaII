@@ -1,0 +1,57 @@
+#textog{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#textop{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* CSS Cabeçalho */
+
+
+#botao{
+  padding: 10px 20px;
+  border-radius: 16px;
+  width: 150px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #F9C89B;
+  color: #522916 ;
+  font-weight: bold;
+}
+#botao a{
+  text-decoration: none;
+  color: #522916;
+}
+
+.meioinf{
+  background: white ;
+  display: flex;
+  color: #522916;
+  height: 280px;
+
+}
+
+.contmeioinf{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 3em;
+}
+
+#imgmeioinf{
+  width: 320px;
+  height: 250px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 40px;
+  border-bottom: 35px;
+  padding-left:  20px;
+}

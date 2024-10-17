@@ -1,0 +1,12 @@
+<div class="" id="meiosup">
+  <div *ngFor="let CardsInformativos of somosCarita" class="row">
+    <div class="col-md-6">
+      <img src="{{CardsInformativos.image}}" alt="logo" class="img-fluid" id="imgmeiosup">
+    </div>
+    <div class="col-6" id="contmeiosup">
+      <h1 id="textog" class="display-4">{{CardsInformativos.title}}</h1>
+      <p id="textop" class="lead">{{CardsInformativos.description}}</p>
+      <a href="sobre.html" class="btn btn-primary btn-lg" id="botao1">{{CardsInformativos.button}}</a>
+    </div>
+  </div>
+</div>

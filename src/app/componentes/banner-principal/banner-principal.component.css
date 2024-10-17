@@ -1,0 +1,28 @@
+.superior {
+  background-image: url(/img/A-sua-doação-pode-ajudar-famílias-carentes-na-cidade-de-Votorantim.png);
+  background-size: cover;
+  background-position: center;
+  height: 429px;
+  position: relative;
+}
+
+.suptexto {
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.315);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.315);
+}
+.suptexto h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
