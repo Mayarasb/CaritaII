@@ -1,0 +1,59 @@
+<p> </p>
+<main class="container-fluid main-content">
+    <div class="page-container">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="dados-instituicao d-flex flex-column align-items-center">
+                    <img src="/img/Usuario/img-perfil.png" alt="Logo" class="img-usuario d-inline-block align-text-top">
+                    <a class="navbar-brand" href="#">
+                        Olá, nome instituição!
+                    </a>
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Dados Instituição</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dados Representante</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Desativar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+  
+        <div class="main-content flex-grow-1">
+            <h2 class="text-center p-4">Desativar a conta</h2>
+            <p class="text-off">Desativar a conta removerá a organização do site, ocultando todas as informações públicas. Para reativar a conta no futuro, será necessário entrar em contato conosco pelo formulário de contato. </p>
+
+            <div class="d-flex align-items-center justify-content-center">
+            <button type="button" class="btn btn-desativar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Desativar
+              </button>
+            </div>
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Desativar a conta</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Deseja continuar com a desativação?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Desativar</button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+
+            
+        </div>
+    </div>
+  </main>
+

@@ -1,0 +1,30 @@
+.card-img-top{
+    width: 100px !important;
+    
+}
+
+.resultados-carita  {
+    align-items: center;
+    color: var(--cor-textoAlternativo) !important ;
+    background-color: var(--cor-secundaria) !important;
+    height: 230px !important;
+    justify-content:center;
+     
+    
+}
+
+
+.card-body-resultado{
+        background-color: var(--cor-secundaria);
+        display: flex ;
+        flex-direction: row ;
+        align-items: center  ;
+        justify-content: space-evenly ;
+        width: 100% ;
+        flex-wrap: wrap ;
+        font-size: 18px;
+        font-weight: 500;
+       
+
+
+}

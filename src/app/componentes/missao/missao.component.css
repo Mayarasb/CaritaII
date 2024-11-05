@@ -1,0 +1,61 @@
+.missao-secao {
+    background-color: #F9C89B;
+    height: 82px;
+    width: 100%;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.348);
+   
+  }
+   
+  .missao-secao h3 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #522916;
+  }
+   
+   
+  .msv {
+    padding-top:  60px;
+    padding-bottom: 60px;
+   
+  }
+   
+  .msv p {
+    text-align: justify;
+  }
+   
+  .missao-box {
+    text-align: center;
+    padding: 0 20px;
+  }
+   
+  .missao-box img {
+    margin-bottom: 20px;
+  }
+   
+  h4 {
+    font-weight: 700;
+    color: #522916;
+    margin-bottom: 10px;
+  }
+   
+  .msv p, .msv ul {
+    font-weight: 400;
+    color: #522916;
+    text-align: justify;
+  }
+   
+   
+  .msv ul {
+    justify-content: left;
+    margin-left: 0px;
+  }
+   
+   
+  .linha {
+    background-color: #522916;
+    height: 350px;
+    width: 3px;
+    border-radius: 60px;
+   
+    margin: 0;
+  }

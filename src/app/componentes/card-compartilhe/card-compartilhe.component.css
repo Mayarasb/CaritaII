@@ -1,0 +1,21 @@
+/* compartilhe*/
+ 
+.compartilhe {
+    background-color: #F9C89B;
+    height: 200px;
+    padding: 20px;
+   
+  }
+   
+  h5 {
+    font-weight: 700;
+    color: #522916;
+    font-size: 25px;
+    margin-bottom: 20px;
+   
+  }
+  .compartilhe p {
+    font-weight: 400;
+    color: #522916;
+    font-size: 16px;
+  }

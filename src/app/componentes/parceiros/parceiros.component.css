@@ -1,0 +1,36 @@
+.parceiros{
+    display: flex;
+    background-color: rgb(255, 247, 231);
+    color: #522916;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.348);
+    font-family: 'Poppins';
+}
+.fs-5 {
+    font-size: larger;
+}
+.listagemParceiros{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.foto{
+    display: flex;
+    justify-content: center;
+    background-color: #F9C89B;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Poppins';
+    margin-left: 20px;
+}

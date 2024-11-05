@@ -11,6 +11,6 @@ import { CommonModule } from '@angular/common';
 })
 export class ComoajudarPIComponent {
   comoAjudar : CardsInformativos[] =[
-    {image: '/img/help_5102230.png', title:'Como Ajudar', description:'Descubra os pontos de arrecadação de alimentos ou cadastre sua empresa para auxiliar na doação',button:'Leia Mais'},
+    {image: '/img/PaginaInicial/help_5102230.png', title:'Como Ajudar', description:'Descubra os pontos de arrecadação de alimentos ou cadastre sua empresa para auxiliar na doação',button:'Leia Mais'},
   ]
 }

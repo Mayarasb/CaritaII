@@ -1,0 +1,25 @@
+.superior {
+    background-image: url(/img/Sobre/banner.png);
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    position: relative;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.348);
+    border-radius: 0;
+  }
+  .suptexto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.315);
+    color: white;
+    padding: 0 20px;
+    text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.315);
+  }
+  .suptexto h1 {
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.315);
+  }
