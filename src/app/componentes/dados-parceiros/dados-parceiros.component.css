@@ -1,0 +1,63 @@
+.main-content{
+  
+    width: 100%;
+    padding: 0px !important;
+    
+        
+}
+
+.form-content{
+  padding: 20px 30px !important;
+  width: 100%;
+}
+
+.page-container {
+    display: flex;
+    width: 100%;
+    background-color: var(--cor-primaria);
+  }
+
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 30px;
+  width: 30%;
+}
+
+.sidebar-content {
+    text-align: center;
+    
+}
+
+.dados-instituição{
+  margin-bottom: 30px !important;
+  
+}
+
+.img-usuario{
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px !important;
+}
+.form-content{
+  background-color: var(--cor-primaria);
+}
+.anexo{
+  padding: 10px;
+}
+.btn-enviar{
+  background-color: var(--cor-secundaria) !important;
+  border: none !important;
+  width: 200px;
+  padding: 15px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-enviar:hover {
+  background-color: #e67350;
+}

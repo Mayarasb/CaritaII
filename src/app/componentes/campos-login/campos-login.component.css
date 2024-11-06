@@ -1,0 +1,269 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('/img/Login-Cadastro/background login.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(3px) ; /* Desfoque no fundo */
+    height: 100vh;
+}
+ 
+/* Container do formulário de login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ 
+/* Estilo do formulário de login */
+.login-form {
+    padding: 2rem;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    width: 100%;
+    max-width: 400px; /* Largura máxima do formulário */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombras suaves */
+}
+ 
+/* Título do formulário */
+.login-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #522916; /* Cor do título */
+}
+ 
+/* Estilo dos campos de entrada */
+.login-form input {
+    height: 45px;
+    padding: 0.75rem;
+    margin-bottom: 1.75rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+::placeholder {
+    text-align: center;
+    color: #522916;
+}
+ 
+/* Estilo do botão */
+.login-form button {
+    padding: 0.75rem;
+    background-color: #F08F36;
+    border: none;
+    border-radius: 40px;
+    color: #000000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+/* Links dentro do formulário */
+.login-form a {
+    text-decoration: none;
+    color: #000000;
+}
+ 
+/* Efeito de hover no botão */
+.login-form button:hover {
+    background-color: #F9C89B;
+}
+ 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+ 
+    /* Ajustes no formulário para dispositivos menores */
+    .login-form {
+        padding: 1.5rem;
+        max-width: 350px;
+    }
+ 
+    /* Ajuste no tamanho do título */
+    .login-form h2 {
+        font-size: 1.5rem;
+    }
+ 
+    /* Ajuste nos campos de input */
+    .login-form input {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+ 
+    /* Ajuste no tamanho do botão */
+    .login-form button {
+        width: 50%;
+        font-size: 0.9rem;
+    }
+}
+ 
+/* Estilo do formulário de login */
+.login-form {
+    padding: 2rem;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    width: 100%;
+    max-width: 400px; /* Largura máxima do formulário */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombras suaves */
+    position: relative; /* Garante que o formulário fique acima da camada de fundo */
+}
+
+/* Título do formulário */
+.login-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #522916; /* Cor do título */
+}
+ 
+/* Estilo dos campos de entrada */
+.login-form input {
+    height: 45px;
+    padding: 0.75rem;
+    margin-bottom: 1.75rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+::placeholder {
+    text-align: center;
+    color: #522916;
+}
+ 
+/* Estilo do botão */
+.login-form button {
+    padding: 0.75rem;
+    background-color: #F08F36;
+    border: none;
+    border-radius: 40px;
+    color: #000000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+/* Links dentro do formulário */
+.login-form a {
+    text-decoration: none;
+    color: #000000;
+}
+ 
+/* Efeito de hover no botão */
+.login-form button:hover {
+    background-color: #F9C89B;
+}
+ 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+ 
+    /* Ajustes no formulário para dispositivos menores */
+    .login-form {
+        padding: 1.5rem;
+        max-width: 350px;
+    }
+ 
+    /* Ajuste no tamanho do título */
+    .login-form h2 {
+        font-size: 1.5rem;
+    }
+ 
+    /* Ajuste nos campos de input */
+    .login-form input {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+ 
+    /* Ajuste no tamanho do botão */
+    .login-form button {
+        width: 50%;
+        font-size: 0.9rem;
+    }
+}
+ 
+/* Estilo do formulário de login */
+.login-form {
+    padding: 2rem;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    width: 100%;
+    max-width: 400px; /* Largura máxima do formulário */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombras suaves */
+    position: relative; /* Garante que o formulário fique acima da camada de fundo */
+}
+ 
+/* Título do formulário */
+.login-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #522916; /* Cor do título */
+}
+ 
+/* Estilo dos campos de entrada */
+.login-form input {
+    height: 45px;
+    padding: 0.75rem;
+    margin-bottom: 1.75rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+::placeholder {
+    text-align: center;
+    color: #522916;
+}
+ 
+/* Estilo do botão */
+.login-form button {
+    padding: 0.75rem;
+    background-color: #F08F36;
+    border: none;
+    border-radius: 40px;
+    color: #000000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+/* Efeito de hover no botão */
+.login-form button:hover {
+    background-color: #F9C89B;
+}
+ 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+ 
+    /* Ajustes no formulário para dispositivos menores */
+    .login-form {
+        padding: 1.5rem;
+        max-width: 350px;
+    }
+ 
+    /* Ajuste no tamanho do título */
+    .login-form h2 {
+        font-size: 1.5rem;
+    }
+ 
+    /* Ajuste nos campos de input */
+    .login-form input {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+ 
+    /* Ajuste no tamanho do botão */
+    .login-form button {
+        width: 50%;
+        font-size: 0.9rem;
+    }
+}
