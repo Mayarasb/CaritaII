@@ -12,11 +12,12 @@ import { PontosArrecadacaoComponent } from './componentes/pontos-arrecadacao/pon
 import { PaginaLoginComponent } from './componentes/pagina-login/pagina-login.component';
 import { PaginaCadastroComponent } from './componentes/pagina-cadastro/pagina-cadastro.component';
 import { PaginaPrecadastroComponent } from './componentes/pagina-precadastro/pagina-precadastro.component';
+import { PaginaContatoComponent } from './componentes/pagina-contato/pagina-contato.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainComponent, PaginaConteudoComponent, PaginaSobreComponent, PaginaComoajudarComponent,PaginaUsuarioComponent,DadosParceirosComponent, DadosRepresentanteParceiroComponent, DesativarParceiroComponent, PontosArrecadacaoComponent, PaginaLoginComponent ,PaginaCadastroComponent, PaginaPrecadastroComponent],
+  imports: [RouterOutlet, MainComponent, PaginaConteudoComponent, PaginaSobreComponent, PaginaComoajudarComponent,PaginaUsuarioComponent,DadosParceirosComponent, DadosRepresentanteParceiroComponent, DesativarParceiroComponent, PontosArrecadacaoComponent, PaginaLoginComponent ,PaginaCadastroComponent, PaginaPrecadastroComponent, PaginaContatoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
