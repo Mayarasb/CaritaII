@@ -16,16 +16,19 @@
                         <a class="nav-link" href="#">Dados Representante</a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link" href="#">Cadastrar Ponto de Arrecadação</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Desativar</a>
                     </li>
                 </ul>
             </div>
         </div>
-  
+
         <div class="main-content flex-grow-1">
             <form class="form-content container-fluid">
                 <h2 class="text-center">Dados do Representante</h2>
-  
+
                 <!-- Campo de Nome com botão de edição -->
                 <div class="row align-items-center">
                     <div class="form-group col-11">
@@ -38,7 +41,7 @@
                         </button>
                     </div>
                 </div>
-  
+
                 <!-- Campo de CPF com botão de edição -->
                 <div class="row align-items-center mt-3">
                     <div class="form-group col-11">
@@ -51,12 +54,12 @@
                         </button>
                     </div>
                 </div>
-  
+
                 <!-- Campo de Email com botão de edição -->
                 <div class="row align-items-center mt-3">
                     <div class="form-group col-11">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="exemplo@dominio.com" readonly>
+                        <input type="email" id="email" name="email"  class="form-control" placeholder="exemplo@dominio.com" readonly>
                     </div>
                     <div class="col-1 d-flex justify-content-center align-items-center">
                         <button type="button" class="btn btn-edit" onclick="toggleEdit('email')">
@@ -64,14 +67,14 @@
                         </button>
                     </div>
                 </div>
-  
+
                 <!-- Botão para abrir o modal -->
                 <div class="d-flex align-items-center justify-content-center mt-4">
                     <button type="button" class="btn btn-primary btn-enviar" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Alterar
                     </button>
                 </div>
-  
+
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -81,9 +84,9 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                              <p>Ao confirmar essa ação enviará uma notificação ao novo representante, que receberá acesso administrativo às informações da organização.</p> 
+                              <p>Ao confirmar essa ação enviará uma notificação ao novo representante, que receberá acesso administrativo às informações da organização.</p>
                               <p>Deseja confirmar a alteração?</p>
-                              
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -96,5 +99,5 @@
         </div>
     </div>
   </main>
-  
-  
+
+

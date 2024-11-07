@@ -11,11 +11,12 @@ import { DesativarParceiroComponent } from './componentes/desativar-parceiro/des
 import { PontosArrecadacaoComponent } from './componentes/pontos-arrecadacao/pontos-arrecadacao.component';
 import { PaginaLoginComponent } from './componentes/pagina-login/pagina-login.component';
 import { PaginaCadastroComponent } from './componentes/pagina-cadastro/pagina-cadastro.component';
+import { PaginaPrecadastroComponent } from './componentes/pagina-precadastro/pagina-precadastro.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainComponent, PaginaConteudoComponent, PaginaSobreComponent, PaginaComoajudarComponent,PaginaUsuarioComponent,DadosParceirosComponent, DadosRepresentanteParceiroComponent, DesativarParceiroComponent, PontosArrecadacaoComponent, PaginaLoginComponent ,PaginaCadastroComponent],
+  imports: [RouterOutlet, MainComponent, PaginaConteudoComponent, PaginaSobreComponent, PaginaComoajudarComponent,PaginaUsuarioComponent,DadosParceirosComponent, DadosRepresentanteParceiroComponent, DesativarParceiroComponent, PontosArrecadacaoComponent, PaginaLoginComponent ,PaginaCadastroComponent, PaginaPrecadastroComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

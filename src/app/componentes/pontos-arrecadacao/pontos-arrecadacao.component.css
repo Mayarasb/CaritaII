@@ -1,9 +1,10 @@
 .main-content{
-  
+
     width: 100%;
     padding: 0px !important;
-    
-        
+    background-color: var(--cor-primaria);
+
+
 }
 
 .form-content{
@@ -24,12 +25,11 @@
 
 .sidebar-content {
     text-align: center;
-    
+
 }
 .pontos-arrecadacao{
-    background-color: var(--cor-primaria);
   margin-bottom: 30px !important;
-  
+
 }
 
 
@@ -38,9 +38,15 @@
   height: 60px;
   margin-bottom: 20px !important;
 }
-.form-content{
-  background-color: var(--cor-primaria);
+
+.card-header{
+  background-color: var(--cor-secundaria) !important;
 }
+
+.card{
+margin: 30px;
+}
+
 .anexo{
   padding: 10px;
 }
@@ -48,14 +54,12 @@
   background-color: var(--cor-secundaria) !important;
   border: none !important;
   width: 200px;
-  padding: 15px;
-  color: white;
+   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 20px;
-  text-align: center;
+   text-align: center;
 }
 
 .btn-enviar:hover {
