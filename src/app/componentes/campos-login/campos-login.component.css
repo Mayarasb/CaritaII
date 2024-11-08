@@ -1,68 +1,76 @@
-
-/* Resetando margin, padding e box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url('/img/Login-Cadastro/background login.jpeg');
-    background-size: cover; /* Faz com que a imagem cubra toda a tela */
-    background-position: center;
-    
-    height: 100vh; /* Garante que a imagem cubra toda a altura da tela */
-    margin: 0;
-    width: 100% !important;
-    }
-  
-  /* Estiliza o container do login */
-  .login-container {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade para dar destaque ao login */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 100%;
-  }
-
-/* Título do formulário */
-.login-form h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    color: white; /* Cor do título */
+  font-family: 'Poppins';
+  background: url('/img/Login-Cadastro/background login- desfoque.png') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(3px);
+}
+#paginaAtual {
+  color: #F08F36;
 }
 
-/* Estilo dos campos de entrada */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+.login-form {
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  border: none !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra leve para destaque */
+}
+
+.login-form h2 {
+  margin-bottom: 1rem;
+  font-size: 44px;
+  color: aliceblue; /* Mantém a cor do título */
+}
+
+.login-form input {
+  width: 100%;
+  height: 50px;
+  padding: 0.75rem;
+  margin-bottom: 1.75rem;
+  border-radius: 15px;
+  font-size: 1rem;
+}
 
 ::placeholder {
-    text-align: center;
-    color: #522916;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Poppins';
 }
 
-/* Estilo do botão */
 .login-form button {
-    padding: 0.75rem;
-    background-color: #F08F36;
-    border: none;
-    border-radius: 40px;
-    color: #000000;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Poppins', sans-serif;
+  padding: 0.75rem;
+  background-color: #F08F36;
+  border: none;
+  border-radius: 40px;
+  color: #000000;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins';
 }
 
-/* Links dentro do formulário */
-.login-form a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Efeito de hover no botão */
 .login-form button:hover {
-    background-color: #F9C89B;
+  background-color: #F9C89B;
 }
 
+.login-form a {
+  text-decoration: none;
+  color: #ffffff; /* Cor do link "Criar conta" */
+}
 
+.criarConta {
+  margin-top: 20px;
+}
