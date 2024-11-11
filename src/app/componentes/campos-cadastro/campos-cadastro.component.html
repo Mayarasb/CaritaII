@@ -1,35 +1,45 @@
-<body class="bg-light">
-
-  <!-- Container principal -->
-  <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-      <!-- Formulário de cadastro -->
-      <form class="login-form bg-white p-4 rounded shadow-sm">
-          <h2 class="text-center mb-4">Cadastro</h2>
-
-          <!-- Campo CPF -->
-          <div class="form-group">
-              <input type="email" class="form-control" placeholder="Cadastre o seu CPF" required>
-          </div>
-
-          <!-- Campo Telefone -->
-          <div class="form-group">
-              <input type="text" class="form-control" placeholder="Cadastre o número de telefone" required>
-          </div>
-
-          <!-- Campo Senha -->
-          <div class="form-group">
-              <input type="password" class="form-control" placeholder="Cadastre sua senha" required>
-          </div>
-
-          <!-- Botão de submit -->
-          <button type="submit" class="btn btn-primary btn-block">
-              Cadastrar
+<div class="body">
+  <div
+    class="container d-flex justify-content-center align-items-center vh-100"
+  >
+    <div class="cadastro-container">
+      <form class="cadastro-form p-4">
+        <h2 class="text-center mb-4">Cadastro</h2>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Insira seu email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Insira seu CPF"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Insira sua senha"
+            required
+          />
+        </div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary">
+            <a routerLink="/pagina-preCadastro" class="text-white text-decoration-none"
+              >Entrar</a
+            >
           </button>
+        </div>
+        <div class="text-center mt-3">
+          <a routerLink="/pagina-cadastro">Criar conta</a>
+        </div>
       </form>
+    </div>
   </div>
-
-  <!-- Script do Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+</div>

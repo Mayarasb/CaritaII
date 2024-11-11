@@ -1,10 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
+.body {
   background: url('/img/Login-Cadastro/background login.jpeg') no-repeat center center fixed;
   background-size: cover;
 

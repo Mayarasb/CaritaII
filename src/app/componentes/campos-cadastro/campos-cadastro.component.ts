@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-campos-cadastro',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './campos-cadastro.component.html',
   styleUrl: './campos-cadastro.component.css'
 })

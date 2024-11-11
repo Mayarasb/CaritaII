@@ -1,114 +1,38 @@
-/* Resetando margin, padding e box-sizing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilo geral do body */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: url('/img/Login-Cadastro/background login- desfoque.png') no-repeat center center fixed;
+.body {
+  font-family: 'Poppins';
+  background: url('/img/Login-Cadastro/background login.jpeg') no-repeat center center fixed;
   background-size: cover;
-  backdrop-filter: blur(3px); /* Desfoque no fundo */
-  height: 100vh;
+  backdrop-filter: blur(3px);
 }
 
-/* Estilo do header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #2b2b2b9d;
-}
 
-header img {
-  width: 35px;
-  margin-left: 30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/* Navegação */
-nav {
-  max-width: 800px;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: #F08F36;
-  text-decoration: underline;
-}
-
-.menu {
-  display: none;
-}
-
-/* Container do formulário de login */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Estilo do formulário de login */
-.login-form {
-  padding: 2rem;
+.cadastro-form {
   border-radius: 8px;
-  align-items: center;
   text-align: center;
-  background: none !important;
-  width: 100%;
-  max-width: 400px; /* Largura máxima do formulário */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombras suaves */
+  border: none;
 }
 
-/* Título do formulário */
-.login-form h2 {
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: #522916; /* Cor do título */
+.cadastro-form h2 {
+  font-weight: bolder;
+  font-size: 44px;
+  color: white; 
 }
 
-/* Estilo dos campos de entrada */
-.login-form input {
-  height: 45px;
-  padding: 0.75rem;
+.cadastro-form input {
+  width: 400px;
+  height: 50px;
   margin-bottom: 1.75rem;
-  border: 1px solid #ccc;
   border-radius: 15px;
   font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
+  
 }
 
 ::placeholder {
   text-align: center;
-  color: #522916;
-}
+  color: var(--cor-texto-primaria);
+  }
 
-/* Estilo do botão */
-.login-form button {
+.cadastro-form button {
   padding: 0.75rem;
   background-color: #F08F36;
   border: none;
@@ -117,125 +41,14 @@ nav ul li a.active {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  }
+
+.cadastro-form button:hover {
+  background-color: #F9C89B;
 }
 
-/* Links dentro do formulário */
-.login-form a {
+.cadastro-form a {
   text-decoration: none;
-  color: #000000;
+  color: white; /* Cor do link "Criar conta" */
 }
 
-/* Efeito de hover no botão */
-.login-form button:hover {
-  background-color: #F9C89B;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-
-  /* Ajustes no formulário para dispositivos menores */
-  .login-form {
-      padding: 1.5rem;
-      max-width: 350px;
-  }
-
-  /* Ajuste no tamanho do título */
-  .login-form h2 {
-      font-size: 1.5rem;
-  }
-
-  /* Ajuste nos campos de input */
-  .login-form input {
-      width: 100%;
-      font-size: 0.9rem;
-  }
-
-  /* Ajuste no tamanho do botão */
-  .login-form button {
-      width: 50%;
-      font-size: 0.9rem;
-  }
-}
-
-/* Estilo do formulário de login */
-.login-form {
-  padding: 2rem;
-  border-radius: 8px;
-  align-items: center;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
-  width: 100%;
-  max-width: 400px; /* Largura máxima do formulário */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombras suaves */
-  position: relative; /* Garante que o formulário fique acima da camada de fundo */
-}
-
-/* Título do formulário */
-.login-form h2 {
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: #ffffff; /* Cor do título */
-}
-
-/* Estilo dos campos de entrada */
-.login-form input {
-  height: 45px;
-  padding: 0.75rem;
-  margin-bottom: 1.75rem;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-::placeholder {
-  text-align: center;
-  color: #522916;
-}
-
-/* Estilo do botão */
-.login-form button {
-display: inline-block !important;
-  padding: 0.75rem;
-  background-color: #F08F36;
-  border: none;
-  border-radius: 40px;
-  color: #000000;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Efeito de hover no botão */
-.login-form button:hover {
-  background-color: #F9C89B;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-
-  /* Ajustes no formulário para dispositivos menores */
-  .login-form {
-      padding: 1.5rem;
-      max-width: 350px;
-  }
-
-  /* Ajuste no tamanho do título */
-  .login-form h2 {
-      font-size: 1.5rem;
-  }
-
-  /* Ajuste nos campos de input */
-  .login-form input {
-      width: 100%;
-      font-size: 0.9rem;
-  }
-
-  /* Ajuste no tamanho do botão */
-  .login-form button {
-      width: 50%;
-      font-size: 0.9rem;
-  }
-}

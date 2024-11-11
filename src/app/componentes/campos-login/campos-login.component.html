@@ -1,24 +1,37 @@
-<body>
-  <div class="container d-flex justify-content-center align-items-center vh-100">
-      <div class="login-container">
-          <form class="login-form p-4 border rounded-3 shadow-sm">
-              <h2 class="text-center mb-4">Login</h2>
-              <div class="mb-3">
-                  <input type="email" class="form-control" placeholder="Insira seu email" required>
-              </div>
-              <div class="mb-3">
-                  <input type="password" class="form-control" placeholder="Insira sua senha" required>
-              </div>
-              <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-primary">
-                      <a href="usuario.html" class="text-white text-decoration-none">Entrar</a>
-                  </button>
-              </div>
-              <div class="text-center mt-3">
-                  <a href="cadastro.html">Criar conta</a>
-              </div>
-          </form>
-      </div>
+<div class="body">
+  <div
+    class="container d-flex justify-content-center align-items-center vh-100"
+  >
+    <div class="login-container">
+      <form class="login-form p-4">
+        <h2 class="text-center mb-4">Login</h2>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Insira seu email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Insira sua senha"
+            required
+          />
+        </div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary">
+            <a routerLink="/pagina-preCadastro" class="text-white text-decoration-none"
+              >Entrar</a
+            >
+          </button>
+        </div>
+        <div class="text-center mt-3">
+          <a routerLink="/pagina-cadastro">Criar conta</a>
+        </div>
+      </form>
+    </div>
   </div>
-
- </body>
+</div>

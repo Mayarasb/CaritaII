@@ -13,11 +13,13 @@ import { PaginaLoginComponent } from './componentes/pagina-login/pagina-login.co
 import { PaginaCadastroComponent } from './componentes/pagina-cadastro/pagina-cadastro.component';
 import { PaginaPrecadastroComponent } from './componentes/pagina-precadastro/pagina-precadastro.component';
 import { PaginaContatoComponent } from './componentes/pagina-contato/pagina-contato.component';
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./componentes/footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainComponent, PaginaConteudoComponent, PaginaSobreComponent, PaginaComoajudarComponent,PaginaUsuarioComponent,DadosParceirosComponent, DadosRepresentanteParceiroComponent, DesativarParceiroComponent, PontosArrecadacaoComponent, PaginaLoginComponent ,PaginaCadastroComponent, PaginaPrecadastroComponent, PaginaContatoComponent],
+  imports: [RouterOutlet, MainComponent, PaginaConteudoComponent, PaginaSobreComponent, PaginaComoajudarComponent, PaginaUsuarioComponent, DadosParceirosComponent, DadosRepresentanteParceiroComponent, DesativarParceiroComponent, PontosArrecadacaoComponent, PaginaLoginComponent, PaginaCadastroComponent, PaginaPrecadastroComponent, PaginaContatoComponent, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

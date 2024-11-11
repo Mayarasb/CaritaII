@@ -1,54 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
+.body {
   font-family: 'Poppins';
   background: url('/img/Login-Cadastro/background login- desfoque.png') no-repeat center center fixed;
   background-size: cover;
-  backdrop-filter: blur(3px);
-}
-#paginaAtual {
-  color: #F08F36;
-}
+  }
 
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
 .login-form {
-  padding: 2rem;
   border-radius: 8px;
   text-align: center;
-  border: none !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra leve para destaque */
+  border: none;
 }
 
 .login-form h2 {
-  margin-bottom: 1rem;
+  font-weight: bolder;
   font-size: 44px;
-  color: aliceblue; /* Mantém a cor do título */
+  color: white; 
 }
 
 .login-form input {
-  width: 100%;
+  width: 400px;
   height: 50px;
-  padding: 0.75rem;
   margin-bottom: 1.75rem;
   border-radius: 15px;
   font-size: 1rem;
+  
 }
 
 ::placeholder {
   text-align: center;
-  color: #ffffff;
-  font-family: 'Poppins';
-}
+  color: var(--cor-texto-primaria);
+  }
 
 .login-form button {
   padding: 0.75rem;
@@ -59,8 +40,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Poppins';
-}
+  }
 
 .login-form button:hover {
   background-color: #F9C89B;
@@ -68,9 +48,6 @@ body {
 
 .login-form a {
   text-decoration: none;
-  color: #ffffff; /* Cor do link "Criar conta" */
+  color: white; /* Cor do link "Criar conta" */
 }
 
-.criarConta {
-  margin-top: 20px;
-}

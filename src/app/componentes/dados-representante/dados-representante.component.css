@@ -14,20 +14,10 @@
 
   .page-container {
     display: flex;
-    width: 100%;
+  
   }
 
-  .sidebar {
-  background-color: #f4f4f4;
-  padding: 30px;
-  width: 30%;
-  }
-
-  .sidebar-content {
-    text-align: center;
-
-  }
-
+  
   .img-usuario{
   width: 60px;
   height: 60px;

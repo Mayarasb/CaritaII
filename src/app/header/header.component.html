@@ -1,25 +1,38 @@
- <!-- Header-->
- <header class="navbar col-12">
+<header class="navbar col-12">
   <nav class="container-fluid col-12">
-    <img src="/img/logo.png" alt="Logo" width="90px" class="d-inline-block align-text-top ">
-    <ul class="nav" >
+    <img
+      routerLink="/pagina-inicial"
+      src="/img/logo.png"
+      alt="Logo"
+      width="90px"
+      class="d-inline-block align-text-top"
+    />
+    <ul class="nav">
       <li class="nav-item">
-        <a  class="nav-link bs-body-color " aria-current="page" href="PaginaInicial.html">Página Inicial</a>
+        <a routerLink="/pagina-inicial" class="nav-link bs-body-color"
+          >Página Inicial</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link bs-body-color-rgb $orange-500" href="sobre.html">Sobre</a>
+        <a
+          routerLink="/pagina-sobre"
+          class="nav-link bs-body-color-rgb $orange-500"
+          >Sobre</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="conteudo.html">Conteúdo</a>
+        <a routerLink="/pagina-conteudo" class="nav-link">Conteúdo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="como_ajudar.html">Como ajudar</a>
+        <a routerLink="/pagina-comoAjudar" class="nav-link">Como ajudar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="formContato.html">Contato</a>
+        <a routerLink="/pagina-contato" class="nav-link">Contato</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
+        <a routerLink="/pagina-login" class="nav-link" href="login.html"
+          >Login</a
+        >
       </li>
     </ul>
   </nav>
