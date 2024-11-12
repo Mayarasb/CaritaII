@@ -2,38 +2,45 @@
   <div class="page-container">
     <div class="sidebar">
       <div class="sidebar-content">
-        <div class="pontos-arrecadação d-flex flex-column align-items-center">
+        <div class="dados-instituição d-flex flex-column align-items-center">
           <img
             src="/img/Usuario/img-perfil.png"
             alt="Logo"
             class="img-usuario d-inline-block align-text-top"
           />
-          <a class="navbar-brand" href="#"> Olá, nome Instituição! </a>
+          <a class="navbar-brand"> Olá, nome Organização! </a>
         </div>
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
-              >Dados Parceiro</a
+            <a
+              routerLink="/pagina-ong"
+              class="nav-link active"
+              aria-current="page"
+              >Dados Instituição</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dados Representante</a>
+            <a routerLink="/pagina-representante" class="nav-link"
+              >Dados Representante da Organização</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cadastrar Ponto de arrecadação</a>
+            <a routerLink="/pagina-pontosArrecadacao" class="nav-link"
+              >Cadastrar Ponto de Arrecadação</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Desativar</a>
+            <a routerLink="/pagina-desativarOng" class="nav-link">Desativar</a>
           </li>
         </ul>
       </div>
     </div>
 
-    <div class="main-content flex-grow-1">
-      <div class="m-5">
-        <h3 class="text-center mt-4">Ponto de Arrecadação</h3>
+    <div class="main-content flex-grow-1 m-2">
+      <div class="m-2 p-2">
+        <h2 class="text-center title">Ponto de Arrecadação</h2>
 
-        <label for="partner-choice"
+        <label
           >Deseja utilizar o endereço fornecido para ser um dos nossos ponto de
           arrecadação de alimentos?</label
         >
@@ -58,6 +65,101 @@
           <label class="form-check-label" for="no-option"> Não </label>
         </div>
       </div>
+
+      <div *ngFor="let address of addresses; let i = index" class="m-3">
+        <h5 class="d-flex justify-content-center">Endereço {{ i + 2 }}</h5>
+        <form class="p-3">
+          <div class="row">
+            <div class="form-group col-9">
+              <label for="endereco">Logradouro</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                class="form-control"
+                placeholder="Rua Exemplo, 123"
+              />
+            </div>
+            <div class="form-group col-3">
+              <label for="endereco">Número</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-4">
+              <label for="endereco">Bairro</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                class="form-control"
+                placeholder="Bairro Exemplo"
+              />
+            </div>
+            <div class="form-group col-4">
+              <label for="endereco">Cidade</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                class="form-control"
+                placeholder="Cidade Exemplo"
+              />
+            </div>
+            <div class="form-group col-4">
+              <label for="endereco">Estado</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                class="form-control"
+                placeholder="ex: São Paulo"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-4">
+              <label for="endereco">CEP</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                class="form-control"
+                placeholder="00000-000"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="d-flex gap-2 justify-content-center">
+          <button (click)="removeAddressForm(i)" class="btn btn-danger mb-2">
+            Remover Endereço
+          </button>
+          <button
+            *ngIf="addresses.length < 3"
+            (click)="addAddressForm()"
+            class="btn btn-secondary mb-2"
+          >
+            Adicionar Endereço
+          </button>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button
+          *ngIf="addresses.length === 0"
+          (click)="addAddressForm()"
+          class="btn btn-enviar"
+        >
+          Adicionar Endereço
+        </button>
+      </div>
+
       <div class="container mt-5">
         <div class="card">
           <div class="card-header bg-primary text-white text-center">
@@ -94,7 +196,7 @@
           </div>
         </div>
         <div class="text-center">
-          <button type="button" class="btn btn-enviar">
+          <button type="button" class="btn btn-enviar mb-3">
             Aceitar Termos e Continuar
           </button>
         </div>

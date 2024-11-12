@@ -3,6 +3,8 @@ export class Informacoesnoticias {
   title: string = ' ';
   description: string = ' ';
   button: string = ' ';
+  rotas: string  = ' ';
+ 
 }
 
 export class CardsInformativos {
@@ -10,4 +12,13 @@ export class CardsInformativos {
     title: string = ' ';
     description: string = ' ';
     button: string = ' ';
+}
+
+export class CategoriasPix{
+  image: string = ' ';
+  title: string = ' ';
+  description: string = ' ';
+  site: string = ' ';
+  chavepix: string = ' ';
+  qrcode: string = ' ';
 }

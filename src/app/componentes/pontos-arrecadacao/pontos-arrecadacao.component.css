@@ -1,44 +1,49 @@
 .main-content{
-
-    width: 100%;
-    padding: 0px !important;
-    background-color: var(--cor-primaria);
-
-
+  
+  width: 100%;
+  padding: 0px !important;
+  
+      
 }
 
 .form-content{
-  padding: 20px 30px !important;
-  width: 100%;
+padding: 20px 30px !important;
+width: 100%;
 }
 
 .page-container {
-    display: flex;
-    width: 100%;
-  }
+  display: flex;
+  width: 100%;
+  background-color: var(--cor-primaria);
+}
 
 .sidebar {
-  background-color: #f4f4f4;
-  padding: 30px;
-  width: 30%;
+background-color: #f4f4f4;
+padding: 30px;
+width: 30%;
 }
 
 .sidebar-content {
-    text-align: center;
-
+  text-align: center;
+  
 }
-.pontos-arrecadacao{
-  margin-bottom: 30px !important;
-
-}
-
 
 .img-usuario{
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px !important;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px !important;
+}
+.dados-instituição{
+  margin-bottom: 30px !important;
+  
 }
 
+.title{
+  color: var(--cor-textoPrimaria);
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 .card-header{
   background-color: var(--cor-secundaria) !important;
 }

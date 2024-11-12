@@ -2,65 +2,63 @@
   <div class="page-container">
     <div class="sidebar">
       <div class="sidebar-content">
-        <div class="dados-instituicao d-flex flex-column align-items-center">
+        <div class="dados-instituição d-flex flex-column align-items-center">
           <img
             src="/img/Usuario/img-perfil.png"
             alt="Logo"
             class="img-usuario d-inline-block align-text-top"
           />
-          <a class="navbar-brand" href="#"> Olá, nome parceiro! </a>
+          <a class="navbar-brand"> Olá, nome Parceiro! </a>
         </div>
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
-              >Dados do Parceiro</a
+            <a
+              routerLink="/pagina-parceiros"
+              class="nav-link active"
+              aria-current="page"
+              >Dados Parceiro</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dados Representante</a>
+            <a routerLink="/pagina-RepresentanteParceiros" class="nav-link"
+              >Dados Parceiros Representante</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cadastrar Ponto de Arrecadação</a>
+            <a routerLink="/pagina-pontosArrecadacaoParceiros" class="nav-link"
+              >Cadastrar Ponto de Arrecadação</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Desativar Parceiro</a>
+            <a routerLink="/pagina-desativarParceiro" class="nav-link"
+              >Desativar</a
+            >
           </li>
         </ul>
       </div>
     </div>
 
+    <!--Modal Duplo-->
+
     <div class="main-content flex-grow-1">
       <h2 class="text-center p-4">Desativar a conta</h2>
       <p class="text-off">
-        Desativar a conta removerá a instituição parceira do site, ocultando
-        todas as informações públicas. Para reativar a conta no futuro, será
-        necessário entrar em contato conosco pelo formulário de contato.
+        Desativar a conta removerá a organização do site, ocultando todas as
+        informações públicas. Para reativar a conta no futuro, será necessário
+        entrar em contato conosco pelo formulário de contato.
       </p>
 
-      <div class="d-flex align-items-center justify-content-center">
-        <button
-          type="button"
-          class="btn btn-desativar"
-          data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop"
-        >
-          Desativar
-        </button>
-      </div>
-      <!-- Modal -->
       <div
         class="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
+        id="exampleModalToggle"
         aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
                 Desativar a conta
               </h1>
               <button
@@ -70,19 +68,67 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">Deseja continuar com a desativação?</div>
+            <div class="modal-body">
+              <p class="text-off">
+                Desativar a conta removerá a instituição parceira do site,
+                ocultando todas as informações públicas. Para reativar a conta
+                no futuro, será necessário entrar em contato conosco pelo
+                formulário de contato.
+              </p>
+            </div>
             <div class="modal-footer">
               <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
+                class="btn btn-primary"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
               >
-                Close
+                Desativar
               </button>
-              <button type="button" class="btn btn-primary">Desativar</button>
+              <button
+                class="btn btn-primary"
+                data-bs-target="#exampleModalToggle"
+                data-bs-toggle="modal"
+              >
+                Cancelar
+              </button>
             </div>
           </div>
         </div>
+      </div>
+      <div
+        class="modal fade"
+        id="exampleModalToggle2"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+                Desativar a conta
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Solicitação de desativação de conta enviada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button
+          class="btn btn-desativar"
+          data-bs-target="#exampleModalToggle"
+          data-bs-toggle="modal"
+        >
+          Desativar
+        </button>
       </div>
     </div>
   </div>

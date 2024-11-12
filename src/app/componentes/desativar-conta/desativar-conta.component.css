@@ -35,6 +35,12 @@
   margin-bottom: 20px !important;
   }
   
+  
+  .dados-instituição{
+    margin-bottom: 30px !important;
+    
+  }
+
   .btn-desativar{
     background-color: var(--cor-secundaria) !important;
     border: none !important;

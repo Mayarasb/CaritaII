@@ -1,0 +1,23 @@
+.main-pix{
+    padding: 30px;
+}
+
+.card{
+    width: 350px;
+    height: 700px;
+}
+
+.card-title{
+    color: var(--cor-textoPrimaria);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+.qr-code{
+    width: 150px;
+    display: flex;
+}

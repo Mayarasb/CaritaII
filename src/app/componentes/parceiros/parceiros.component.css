@@ -26,11 +26,9 @@
 .foto{
     display: flex;
     justify-content: center;
-    background-color: #F9C89B;
     width: 100px;
     height: 60px;
     text-align: center;
     align-items: center;
-    font-family: 'Poppins';
     margin-left: 20px;
 }

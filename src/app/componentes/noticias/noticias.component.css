@@ -35,3 +35,8 @@
     font-weight: bold;
     border: none;
 }
+
+.link{
+    text-decoration: none;
+    color: var(--cor-textoPrimaria);
+}

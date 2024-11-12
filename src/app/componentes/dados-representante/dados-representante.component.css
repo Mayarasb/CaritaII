@@ -1,28 +1,42 @@
 .main-content{
+  
+  width: 100%;
+  padding: 0px !important;
+  
+      
+}
 
-    width: 100%;
-    padding: 0px !important;
+.form-content{
+padding: 20px 30px !important;
+width: 100%;
+}
 
-
-  }
-
-  .form-content{
-  padding: 20px 30px !important;
+.page-container {
+  display: flex;
   width: 100%;
   background-color: var(--cor-primaria);
-  }
+}
 
-  .page-container {
-    display: flex;
-  
-  }
+.sidebar {
+background-color: #f4f4f4;
+padding: 30px;
+width: 30%;
+}
 
+.sidebar-content {
+  text-align: center;
   
-  .img-usuario{
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px !important;
-  }
+}
+
+.img-usuario{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px !important;
+}
+.dados-instituição{
+  margin-bottom: 30px !important;
+  
+}
 
   .btn-enviar{
     background-color: var(--cor-secundaria) !important;

@@ -15,6 +15,10 @@ import { DesativarContaComponent } from './componentes/desativar-conta/desativar
 import { PontosArrecadacaoComponent } from './componentes/pontos-arrecadacao/pontos-arrecadacao.component';
 import { DesativarParceiroComponent } from './componentes/desativar-parceiro/desativar-parceiro.component';
 import { DadosRepresentanteParceiroComponent } from './componentes/dados-representante-parceiro/dados-representante-parceiro.component';
+import { PontosArrecadacaoParceiroComponent } from './componentes/pontos-arrecadacao-parceiro/pontos-arrecadacao-parceiro.component';
+import { FomeVotorantimNoticiaComponent } from './componentes/fome-votorantim-noticia/fome-votorantim-noticia.component';
+import { AlimentosNoticiasComponent } from './componentes/alimentos-noticias/alimentos-noticias.component';
+import { DoacaoNoticiasComponent } from './componentes/doacao-noticias/doacao-noticias.component';
 
 export const routes: Routes = [
     {path: 'pagina-inicial', component: MainComponent },
@@ -30,8 +34,13 @@ export const routes: Routes = [
     {path: 'pagina-representante', component: DadosRepresentanteComponent},
     {path: 'pagina-RepresentanteParceiros', component: DadosRepresentanteParceiroComponent},
     {path: 'pagina-pontosArrecadacao', component: PontosArrecadacaoComponent}, 
+    {path: 'pagina-pontosArrecadacaoParceiros', component: PontosArrecadacaoParceiroComponent}, 
     {path: 'pagina-desativarOng', component: DesativarContaComponent},
     {path: 'pagina-desativarParceiro', component: DesativarParceiroComponent},
+    {path: 'noticia-fomeVotorantim', component: FomeVotorantimNoticiaComponent},
+    {path: 'noticia-alimentos', component: AlimentosNoticiasComponent},
+    {path: 'noticia-doacao', component: DoacaoNoticiasComponent},
+  
       
  
     

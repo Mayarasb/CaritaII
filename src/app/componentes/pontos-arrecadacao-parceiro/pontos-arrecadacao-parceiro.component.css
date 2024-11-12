@@ -28,24 +28,25 @@ width: 30%;
   
 }
 
-.img-usuario{
-    width: 60px;
-    height: 60px;
-    margin-bottom: 20px !important;
-}
-
-
-
 .dados-instituição{
-  margin-bottom: 30px !important;
-  
-}
-
-
-.form-content{
-  background-color: var(--cor-primaria);
+margin-bottom: 30px !important;
 
 }
+
+.img-usuario{
+width: 60px;
+height: 60px;
+margin-bottom: 20px !important;
+}
+
+.card-header{
+  background-color: var(--cor-secundaria) !important;
+}
+
+.card{
+margin: 30px;
+}
+
 .anexo{
   padding: 10px;
 }
@@ -53,14 +54,12 @@ width: 30%;
   background-color: var(--cor-secundaria) !important;
   border: none !important;
   width: 200px;
-  padding: 15px;
-  color: white;
+   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 20px;
-  text-align: center;
+   text-align: center;
 }
 
 .btn-enviar:hover {

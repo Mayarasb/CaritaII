@@ -1,0 +1,42 @@
+body {
+    background-color: var(--cor-primaria); /* Cor de fundo personalizada */
+    color: var(--cor-textoSecundaria);
+    padding: 10px;
+
+}
+.img-logo{
+    width: 150px;
+}
+
+main {
+    background-color: var(--cor-terciária);
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.titulo-materia{
+    color: var(--cor-textoPrimaria);
+    font-weight: bold;
+}
+
+.title{
+    color: var(--cor-textoPrimaria);
+    padding-bottom: 10px;
+    text-align: center;
+    text-align: center;
+}
+
+.text {
+    text-align: justify;
+    text-indent: 3em;
+    padding: 30px;
+}
+
+article ul {
+    padding: 40px;
+    padding-top: 0;
+}

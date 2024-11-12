@@ -1,0 +1,24 @@
+<main class="container-fluid main-pix">
+    <div class="row">
+        <!-- Cartão da ONG 1 -->
+        <div class="col-md-4 mb-4" *ngFor="let CategoriasPix of cardspix">
+            <div class="card container-fluid">
+                <img src={{CategoriasPix.image}} alt="Logo da ONG 1" class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title text-center">{{CategoriasPix.title}}</h2>
+                    <p class="card-text">{{CategoriasPix.description}}</p>
+                    <a href="#" class="card-link">{{CategoriasPix.site}}</a>
+                    <div class="pix-info mt-3">
+                        <p><strong>Chave Pix:</strong>{{CategoriasPix.chavepix}}</p>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src={{CategoriasPix.qrcode}} alt="QR Code Pix da ONG 1" class="qr-code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>   
+</main>
+
+

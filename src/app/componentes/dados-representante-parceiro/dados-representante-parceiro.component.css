@@ -33,6 +33,11 @@
   height: 60px;
   margin-bottom: 20px !important;
   }
+
+  .dados-instituição{
+    margin-bottom: 30px !important;
+    
+  }
   
   .btn-enviar{
     background-color: var(--cor-secundaria) !important;

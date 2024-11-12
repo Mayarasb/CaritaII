@@ -2,12 +2,12 @@
 <!-- Cartão 1-->
 <div class="card">
   <div
-    *ngFor="let Categoriasnoticiasnoticias of categorias"
+    *ngFor="let Informacoesnoticias of categorias"
     class="row g-1 noticia"
   >
     <div class="col-md-4">
       <img
-        src="{{ Categoriasnoticiasnoticias.image }}"
+        src="{{ Informacoesnoticias.image }}"
         class="img-fluid rounded-start"
         alt="..."
       />
@@ -15,11 +15,12 @@
     <div class="col-md-8 texto-noticia">
       <div class="card-body">
         <h5 class="card-title titulo-noticia">
-          {{ Categoriasnoticiasnoticias.title }}
+          {{ Informacoesnoticias.title }}
         </h5>
-        <p class="card-text">{{ Categoriasnoticiasnoticias.description }}</p>
+        <p class="card-text">{{ Informacoesnoticias.description }}</p>
         <button class="botao-noticia">
-          {{ Categoriasnoticiasnoticias.button }}
+          <a class="link" routerLink= "{{Informacoesnoticias.rotas}}">{{Informacoesnoticias.button}}</a>
+          
         </button>
       </div>
     </div>

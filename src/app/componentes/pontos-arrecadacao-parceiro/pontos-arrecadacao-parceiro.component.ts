@@ -1,15 +1,15 @@
-import { CommonModule, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-pontos-arrecadacao',
+  selector: 'app-pontos-arrecadacao-parceiro',
   standalone: true,
   imports: [RouterLink, CommonModule],
-  templateUrl: './pontos-arrecadacao.component.html',
-  styleUrl: './pontos-arrecadacao.component.css'
+  templateUrl: './pontos-arrecadacao-parceiro.component.html',
+  styleUrl: './pontos-arrecadacao-parceiro.component.css'
 })
-export class PontosArrecadacaoComponent {
+export class PontosArrecadacaoParceiroComponent {
 
   addresses: number[] = [];
 
@@ -23,4 +23,6 @@ export class PontosArrecadacaoComponent {
     this.addresses.splice(index, 1);
   }
 }
+
+
 

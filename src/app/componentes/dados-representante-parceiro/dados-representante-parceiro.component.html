@@ -2,28 +2,37 @@
   <div class="page-container">
     <div class="sidebar">
       <div class="sidebar-content">
-        <div class="dados-instituicao d-flex flex-column align-items-center">
+        <div class="dados-instituição d-flex flex-column align-items-center">
           <img
             src="/img/Usuario/img-perfil.png"
             alt="Logo"
             class="img-usuario d-inline-block align-text-top"
           />
-          <a class="navbar-brand" href="#"> Olá, nome Parceiro! </a>
+          <a class="navbar-brand"> Olá, nome Parceiro! </a>
         </div>
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
-              >Dados do Parceiro</a
+            <a
+              routerLink="/pagina-parceiros"
+              class="nav-link active"
+              aria-current="page"
+              >Dados Parceiro</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dados Representante</a>
+            <a routerLink="/pagina-RepresentanteParceiros" class="nav-link"
+              >Dados Parceiros Representante</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cadastrar Ponto de Arrecadação</a>
+            <a routerLink="/pagina-pontosArrecadacaoParceiros" class="nav-link"
+              >Cadastrar Ponto de Arrecadação</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Desativar</a>
+            <a routerLink="/pagina-desativarParceiro" class="nav-link"
+              >Desativar</a
+            >
           </li>
         </ul>
       </div>
@@ -31,7 +40,7 @@
 
     <div class="main-content flex-grow-1">
       <form class="form-content container-fluid">
-        <h2 class="text-center">Dados do Representante</h2>
+        <h2 class="text-center">Dados do Representante Parceiro</h2>
 
         <!-- Campo de Nome com botão de edição -->
         <div class="row align-items-center">
@@ -43,18 +52,7 @@
               name="org-name"
               class="form-control"
               placeholder="Nome completo"
-              readonly
             />
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <button
-              type="button"
-              class="btn btn-edit"
-              onclick="toggleEdit('org-name')"
-            >
-              &#9998;
-              <!-- Código Unicode do ícone de lápis -->
-            </button>
           </div>
         </div>
 
@@ -68,17 +66,7 @@
               name="cpf"
               class="form-control"
               placeholder="000.000.000-00"
-              readonly
             />
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <button
-              type="button"
-              class="btn btn-edit"
-              onclick="toggleEdit('cpf')"
-            >
-              &#9998;
-            </button>
           </div>
         </div>
 
@@ -92,45 +80,24 @@
               name="email"
               class="form-control"
               placeholder="exemplo@dominio.com"
-              readonly
             />
           </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <button
-              type="button"
-              class="btn btn-edit"
-              onclick="toggleEdit('email')"
-            >
-              &#9998;
-            </button>
-          </div>
         </div>
 
-        <!-- Botão para abrir o modal -->
-        <div class="d-flex align-items-center justify-content-center mt-4">
-          <button
-            type="button"
-            class="btn btn-primary btn-enviar"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Alterar
-          </button>
-        </div>
+        <!--Modal Duplo-->
 
-        <!-- Modal -->
         <div
           class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
+          id="exampleModalToggle"
           aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1"
         >
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  Alterar o Representante
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+                  Alterar Representante Parceiro
                 </h1>
                 <button
                   type="button"
@@ -141,26 +108,66 @@
               </div>
               <div class="modal-body">
                 <p>
-                  Ao confirmar essa ação enviará uma notificação ao novo
-                  representante, que receberá acesso administrativo às
-                  informações da organização.
+                  Ao confirmar essa ação,será enviado uma notificação ao novo
+                  representante da instituição parceira via e-mail, que terá
+                  acesso administrativo ás informações da organização
                 </p>
                 <p>Deseja confirmar a alteração?</p>
               </div>
               <div class="modal-footer">
                 <button
+                  class="btn btn-primary"
+                  data-bs-target="#exampleModalToggle2"
+                  data-bs-toggle="modal"
+                >
+                  Alterar
+                </button>
+                <button
                   type="button"
-                  class="btn btn-secondary"
+                  class="btn btn-primary"
                   data-bs-dismiss="modal"
+                  aria-label="Close"
                 >
                   Cancelar
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Enviar Alteração
                 </button>
               </div>
             </div>
           </div>
+        </div>
+        <div
+          class="modal fade"
+          id="exampleModalToggle2"
+          aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel2"
+          tabindex="-1"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+                  Alterar Parceiro Representante
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>Solicitação Enviada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <button
+            class="btn btn-enviar"
+            data-bs-target="#exampleModalToggle"
+            data-bs-toggle="modal"
+          >
+            Alterar
+          </button>
         </div>
       </form>
     </div>
