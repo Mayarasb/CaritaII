@@ -3,7 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./componentes/footer/footer.component";
 
-import { DoacaoNoticiasComponent } from "./componentes/doacao-noticias/doacao-noticias.component";
 
 @Component({
   selector: 'app-root',

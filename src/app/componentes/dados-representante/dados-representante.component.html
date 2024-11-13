@@ -80,91 +80,43 @@
           </div>
         </div>
 
-        <!--Modal Duplo-->
+        <!--Modal-->
 
-        <div
-          class="modal fade"
-          id="exampleModalToggle"
-          aria-hidden="true"
-          aria-labelledby="exampleModalToggleLabel"
-          tabindex="-1"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
-                  Alterar Representante
-                </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <p>
-                  Ao confirmar essa ação,será enviado uma notificação ao novo
-                  representante via e-mail, que terá acesso administrativo ás
-                  informações da organização
-                </p>
-                <p>Deseja confirmar a alteração?</p>
-              </div>
-              <div class="modal-footer">
-                <button
-                  class="btn btn-primary"
-                  data-bs-target="#exampleModalToggle2"
-                  data-bs-toggle="modal"
-                >
-                  Alterar
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                >
-                  Cancelar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="modal fade"
-          id="exampleModalToggle2"
-          aria-hidden="true"
-          aria-labelledby="exampleModalToggleLabel2"
-          tabindex="-1"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
-                  Alterar Representante
-                </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <p>Solicitação Enviada</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex align-items-center">
-          <button
-            class="btn btn-enviar"
-            data-bs-target="#exampleModalToggle"
-            data-bs-toggle="modal"
-          >
-            Alterar
-          </button>
-        </div>
+<!-- Button trigger modal -->
+ <div class="d-flex justify-content-center">
+<button type="button" class="btn btn-enviar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Alterar
+</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Alterar Representante</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Desativar a conta removerá a organização do site, ocultando
+          todas as informações públicas. Para reativar a conta no futuro,
+          será necessário entrar em contato conosco pelo formulário de
+          contato.
+        </p>
+        <p>Deseja continuar com a alteração?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
       </form>
     </div>
   </div>
