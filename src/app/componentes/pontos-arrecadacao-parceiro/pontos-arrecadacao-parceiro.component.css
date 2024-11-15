@@ -1,9 +1,9 @@
 .main-content{
-  
+
   width: 100%;
   padding: 0px !important;
-  
-      
+
+
 }
 
 .form-content{
@@ -25,20 +25,25 @@ width: 30%;
 
 .sidebar-content {
   text-align: center;
-  
-}
-
-.dados-instituição{
-margin-bottom: 30px !important;
 
 }
 
 .img-usuario{
-width: 60px;
-height: 60px;
-margin-bottom: 20px !important;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px !important;
+}
+.dados-instituição{
+  margin-bottom: 30px !important;
+
 }
 
+.title{
+  color: var(--cor-textoPrimaria);
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 .card-header{
   background-color: var(--cor-secundaria) !important;
 }

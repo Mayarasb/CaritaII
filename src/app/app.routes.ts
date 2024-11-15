@@ -21,28 +21,28 @@ import { AlimentosNoticiasComponent } from './componentes/alimentos-noticias/ali
 import { DoacaoNoticiasComponent } from './componentes/doacao-noticias/doacao-noticias.component';
 
 export const routes: Routes = [
-    {path: 'pagina-inicial', component: MainComponent },
+    {path: '', component: MainComponent },
     {path: 'pagina-sobre', component: PaginaSobreComponent },
     {path: 'pagina-conteudo', component: PaginaConteudoComponent },
     {path: 'pagina-comoAjudar', component: PaginaComoajudarComponent },
-    {path: 'pagina-contato', component: PaginaContatoComponent}, 
+    {path: 'pagina-contato', component: PaginaContatoComponent},
     {path: 'pagina-login', component: PaginaLoginComponent},
     {path: 'pagina-preCadastro', component: PaginaPrecadastroComponent},
-    {path: 'pagina-cadastro', component: PaginaCadastroComponent}, 
+    {path: 'pagina-cadastro', component: PaginaCadastroComponent},
     {path: 'pagina-ong', component: DadosInstituicaoComponent},
     {path: 'pagina-parceiros', component: DadosParceirosComponent},
     {path: 'pagina-representante', component: DadosRepresentanteComponent},
     {path: 'pagina-RepresentanteParceiros', component: DadosRepresentanteParceiroComponent},
-    {path: 'pagina-pontosArrecadacao', component: PontosArrecadacaoComponent}, 
-    {path: 'pagina-pontosArrecadacaoParceiros', component: PontosArrecadacaoParceiroComponent}, 
+    {path: 'pagina-pontosArrecadacao', component: PontosArrecadacaoComponent},
+    {path: 'pagina-pontosArrecadacaoParceiros', component: PontosArrecadacaoParceiroComponent},
     {path: 'pagina-desativarOng', component: DesativarContaComponent},
     {path: 'pagina-desativarParceiro', component: DesativarParceiroComponent},
     {path: 'noticia-fomeVotorantim', component: FomeVotorantimNoticiaComponent},
     {path: 'noticia-alimentos', component: AlimentosNoticiasComponent},
     {path: 'noticia-doacao', component: DoacaoNoticiasComponent},
-  
-      
- 
-    
-    
+
+
+
+
+
 ];
