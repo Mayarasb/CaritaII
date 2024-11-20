@@ -3,34 +3,52 @@
     class="container d-flex justify-content-center align-items-center vh-100"
   >
     <div class="cadastro-container">
-      <form class="cadastro-form p-4">
+      <form [formGroup]="myForm"class="cadastro-form p-4" (ngSubmit)="onSubmit()">
         <h2 class="text-center mb-4">Cadastro</h2>
         <div class="mb-3">
           <input
+          formControlName="email"
             type="email"
             class="form-control"
             placeholder="Insira seu email"
             required
           />
+          <div
+            *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched"
+          >
+            <span class="text-danger ">Email Inválido</span>
+          </div>
         </div>
         <div class="mb-3">
           <input
+          formControlName="CPF"
             type="text"
             class="form-control"
             placeholder="Insira seu CPF"
             required
           />
+          <div
+            *ngIf="myForm.get('CPF')?.invalid && myForm.get('CPF')?.touched"
+          >
+            <span class="text-danger ">O CPF deve conter 11 digitos </span>
+          </div>
         </div>
         <div class="mb-3">
           <input
+          formControlName="senha"
             type="password"
             class="form-control"
             placeholder="Insira sua senha"
             required
           />
+          <div
+            *ngIf="myForm.get('senha')?.invalid && myForm.get('senha')?.touched"
+          >
+            <span class="text-danger ">sua senha deve conter pelo menos 6 caractere </span>
+          </div>
         </div>
         <div class="d-grid gap-2">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit"  class="btn btn-primary">
             <a routerLink="/pagina-preCadastro" class="text-white text-decoration-none"
               >Entrar</a
             >
@@ -43,3 +61,4 @@
     </div>
   </div>
 </div>
+ 

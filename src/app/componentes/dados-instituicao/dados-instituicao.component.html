@@ -176,7 +176,7 @@
           </div>
         </div>
 
-        <!--Input subgrupo Endereço-->
+        <!--Input Endereço-->
 
         <div formGroupName="endereco">
           <!--Input Logradouro-->
@@ -190,17 +190,7 @@
                 placeholder="Rua Exemplo, 123"
                 formControlName="logradouro"
               />
-              <!--Validação Endereço -->
-              <div
-                *ngIf="
-                  formOrganizacao.get('endereco.logradouro')?.invalid &&
-                  formOrganizacao.get('endereco.logradouro')?.touched
-                "
-                class="text-danger"
-              >
-                <small>O logradouro é obrigatório.</small>
-              </div>
-            </div>
+             </div>
 
             <!--Input Numero-->
 

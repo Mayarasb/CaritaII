@@ -37,19 +37,25 @@
     </div>
 
     <div class="main-content flex-grow-1">
-      <form class="form-content container-fluid">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="form-content container-fluid">
         <h2 class="text-center">Dados do Representante</h2>
 
         <div class="row align-items-center">
           <div class="form-group col-11">
             <label for="org-name">Nome</label>
             <input
+            formControlName="nome"
               type="text"
               id="org-name"
               name="org-name"
               class="form-control"
               placeholder="Nome completo"
             />
+            <div
+            *ngIf="myForm.get('nome')?.invalid && myForm.get('nome')?.touched"
+          >
+            <span class="text-danger ">O campo não pode estar vazio</span>
+          </div>
           </div>
         </div>
 
@@ -58,12 +64,18 @@
           <div class="form-group col-11">
             <label for="cpf">CPF</label>
             <input
+            formControlName="CPF"
               type="text"
               id="cpf"
               name="cpf"
               class="form-control"
               placeholder="000.000.000-00"
             />
+            <div
+            *ngIf="myForm.get('CPF')?.invalid && myForm.get('CPF')?.touched"
+          >
+            <span class="text-danger ">O CPF deve conter 11 digitos</span>
+          </div>
           </div>
         </div>
 
@@ -71,12 +83,18 @@
           <div class="form-group col-11">
             <label for="email">Email</label>
             <input
+            formControlName="email"
               type="email"
               id="email"
               name="email"
               class="form-control"
               placeholder="exemplo@dominio.com"
             />
+            <div
+            *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched"
+          >
+            <span class="text-danger ">Email Inválido</span>
+          </div>
           </div>
         </div>
 
@@ -84,7 +102,7 @@
 
 <!-- Button trigger modal -->
  <div class="d-flex justify-content-center">
-<button type="button" class="btn btn-enviar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button  type="button" class="btn btn-enviar" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Alterar
 </button>
 </div>
@@ -121,3 +139,4 @@
     </div>
   </div>
 </div>
+ 

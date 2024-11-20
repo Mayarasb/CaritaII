@@ -27,6 +27,11 @@
             placeholder="Insira sua senha"
             required
           />
+          <div
+            *ngIf="myForm.get('senha')?.invalid && myForm.get('senha')?.touched"
+          >
+            <span class="text-danger "> sua senha deve conter pelo menos 6 caracteres</span>
+          </div>
         </div>
         <div class="d-grid gap-2">
           <button type="submit" (click)="onSubmit()" class="btn btn-primary">

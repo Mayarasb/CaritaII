@@ -39,20 +39,47 @@
     </div>
 
     <div class="main-content flex-grow-1">
-      <form class="form-content container-fluid">
+
+      <!--Formulário Reativo -->
+      <form [formGroup]="formParceiros"
+      (ngSubmit)="onSubmit()"
+      class="form-content container-fluid">
         <h2 class="text-center">Dados do Parceiro</h2>
+
+        <!--Inputs-->
+        <!--Input Nome-->
         <div class="row">
           <div class="form-group col-12">
             <label for="org-name">Nome da Instituição Parceira</label>
             <input
               type="text"
               id="org-name"
-              name="org-name"
+              formControlName="orgName"
               class="form-control"
               placeholder="Nome Completo"
             />
+
+             <!--Validação Nome-->
+             <div
+             *ngIf="
+               formParceiros.get('orgName')?.invalid &&
+               formParceiros.get('orgName')?.touched
+             "
+             class="text-danger"
+           >
+             <small
+               *ngIf="formParceiros.get('orgName')?.errors?.['required']"
+               >O nome da organização é obrigatório.</small
+             >
+             <small
+               *ngIf="formParceiros.get('orgName')?.errors?.['minlength']"
+               >O nome deve ter no mínimo 3 caracteres.</small
+             >
+           </div>
           </div>
         </div>
+
+        <!--Input CNPJ-->
 
         <div class="row">
           <div class="form-group col-6">
@@ -60,127 +87,307 @@
             <input
               type="text"
               id="cnpj"
-              name="cnpj"
+              formControlName="cnpj"
               class="form-control"
               placeholder="00.000.000/0000-00"
             />
+             <!--Validação CNPJ-->
+             <div
+             *ngIf="
+               formParceiros.get('cnpj')?.invalid &&
+               formParceiros.get('cnpj')?.touched
+             "
+             class="text-danger"
+           >
+             <small *ngIf="formParceiros.get('cnpj')?.errors?.['required']"
+               >O CNPJ é obrigatório.</small
+             >
+             <small *ngIf="formParceiros.get('cnpj')?.errors?.['pattern']"
+               >CNPJ inválido. Formato esperado: 00.000.000/0000-00.</small
+             >
+           </div>
           </div>
+
+           <!--Input Telefone-->
           <div class="form-group col-6">
             <label for="telefone">Telefone</label>
             <input
               type="text"
               id="telefone"
-              name="telefone"
+              formControlName="telefone"
               class="form-control"
               placeholder="(00) 00000-0000"
             />
+
+             <!--Validação Telefone-->
+             <div
+             *ngIf="
+               formParceiros.get('telefone')?.invalid &&
+               formParceiros.get('telefone')?.touched
+             "
+             class="text-danger"
+           >
+             <small
+               *ngIf="formParceiros.get('telefone')?.errors?.['required']"
+               >O telefone é obrigatório.</small
+             >
+             <small
+               *ngIf="formParceiros.get('telefone')?.errors?.['pattern']"
+               >Telefone inválido. Formato esperado: (00) 00000-0000.</small
+             >
+           </div>
           </div>
         </div>
 
+        <!--Input Email-->
         <div class="row">
           <div class="form-group col-12">
             <label for="email">Email</label>
             <input
               type="email"
               id="email"
-              name="email"
+              formControlName="email"
               class="form-control"
               placeholder="exemplo@dominio.com"
             />
+
+             <!--Validação Email-->
+             <div
+             *ngIf="
+               formParceiros.get('email')?.invalid &&
+               formParceiros.get('email')?.touched
+             "
+             class="text-danger"
+           >
+             <small *ngIf="formParceiros.get('email')?.errors?.['required']"
+               >O email é obrigatório.</small
+             >
+             <small *ngIf="formParceiros.get('email')?.errors?.['email']"
+               >Formato de email inválido.</small
+             >
+           </div>
           </div>
         </div>
 
+        <!--Input subgrupo Endereço-->
+        <!--Input Logradouro-->
         <div class="row">
           <div class="form-group col-9">
-            <label for="endereco">Logradouro</label>
+            <label for="logradouro">Logradouro</label>
             <input
               type="text"
-              id="endereco"
-              name="endereco"
+              id="logradouro"
               class="form-control"
               placeholder="Rua Exemplo, 123"
+              formControlName="logradouro"
             />
           </div>
+
+          <!--Input Numero-->
+
           <div class="form-group col-3">
-            <label for="endereco">Número</label>
+            <label for="numero">Número</label>
             <input
               type="text"
-              id="endereco"
-              name="endereco"
+              id="numero"
+              formControlName="numero"
               class="form-control"
             />
+
+            <!--Validação Numero-->
+            <div
+            *ngIf="
+              formParceiros.get('numero')?.invalid &&
+              formParceiros.get('numero')?.touched
+            "
+            class="text-danger"
+          >
+            <small
+              *ngIf="formParceiros.get('numero')?.errors?.['required']"
+              >O número é obrigatório.</small
+            >
+            <small
+              *ngIf="formParceiros.get('numero')?.errors?.['minlength']"
+              >O número deve ter no mínimo 2 caracteres.</small
+            >
+          </div>
           </div>
         </div>
 
+        <!--Input Bairro-->
         <div class="row">
           <div class="form-group col-4">
-            <label for="endereco">Bairro</label>
+            <label for="bairro">Bairro</label>
             <input
               type="text"
-              id="endereco"
-              name="endereco"
+              id="bairro"
+              formControlName="bairro"
               class="form-control"
               placeholder="Bairro Exemplo"
             />
+            <!--Validação Bairro-->
+            <div
+            *ngIf="
+              formParceiros.get('bairro')?.invalid &&
+              formParceiros.get('bairro')?.touched
+            "
+            class="text-danger"
+          >
+            <small
+              *ngIf="formParceiros.get('bairro')?.errors?.['required']"
+              >O bairro é obrigatório.</small
+            >
+            <small
+              *ngIf="formParceiros.get('bairro')?.errors?.['minlength']"
+              >O bairro deve ter no mínimo 5 caracteres.</small
+            >
           </div>
+          </div>
+
+           <!--Input Cidade-->
+
           <div class="form-group col-4">
-            <label for="endereco">Cidade</label>
+            <label for="cidade">Cidade</label>
             <input
               type="text"
-              id="endereco"
-              name="endereco"
+              id="cidade"
+              formControlName="cidade"
               class="form-control"
               placeholder="Cidade Exemplo"
             />
+             <!--Validação Cidade-->
+             <div
+             *ngIf="
+               formParceiros.get('cidade')?.invalid &&
+               formParceiros.get('cidade')?.touched
+             "
+             class="text-danger"
+           >
+             <small
+               *ngIf="formParceiros.get('cidade')?.errors?.['required']"
+               >A cidade é obrigatório.</small
+             >
+             <small
+               *ngIf="formParceiros.get('numero')?.errors?.['minlength']"
+               >A cidade deve ter no mínimo 2 caracteres.</small
+             >
+           </div>
           </div>
+
+           <!--Input Estado-->
           <div class="form-group col-4">
-            <label for="endereco">Estado</label>
+            <label for="estado">Estado</label>
             <input
               type="text"
-              id="endereco"
-              name="endereco"
+              id="estado"
+              formControlName="estado"
               class="form-control"
               placeholder="ex: São Paulo"
             />
+            <!--Validação Estado-->
+            <div
+            *ngIf="
+              formParceiros.get('estado')?.invalid &&
+              formParceiros.get('estado')?.touched
+            "
+            class="text-danger"
+          >
+            <small
+              *ngIf="formParceiros.get('estado')?.errors?.['required']"
+              >O estado é obrigatório.</small
+            >
+            <small
+              *ngIf="formParceiros.get('estado')?.errors?.['minlength']"
+              >O estado deve ter no mínimo 2 caracteres.</small
+            >
+          </div>
           </div>
         </div>
 
+        <!--Input CEP-->
+
         <div class="row">
           <div class="form-group col-6">
-            <label for="endereco">CEP</label>
+            <label for="cep">CEP</label>
             <input
               type="text"
-              id="endereco"
-              name="endereco"
+              id="cep"
+              formControlName="cep"
               class="form-control"
               placeholder="00000-000"
             />
+            <!--Validação Cep-->
+            <div
+            *ngIf="
+              formParceiros.get('cep')?.invalid &&
+              formParceiros.get('cep')?.touched
+            "
+            class="text-danger"
+          >
+            <small
+              *ngIf="formParceiros.get('cep')?.errors?.['required']"
+              >O CEP é obrigatório.</small
+            >
+            <small
+              *ngIf="formParceiros.get('cep')?.errors?.['pattern']"
+              >CEP inválido. Formato esperado: 00000-000.</small
+            >
+          </div>
           </div>
 
+          <!--Input Horario de Funcionamento-->
+
           <div class="form-group col-6">
-            <label for="chave-pix">Horário de Funcionamento</label>
+            <label for="horarioFuncionamento">Horário de Funcionamento</label>
             <input
               type="text"
               class="form-control"
-              id="operating-hours"
-              name="operating-hours"
+              id="horarioFuncionamento"
+              formControlName="horarioFuncionamento"
               placeholder="Ex.: das 8h às 18h"
             />
+            <!--Validação Horario de Funcionamento-->
+            <div
+            *ngIf="
+              formParceiros.get('horarioFuncionamento')?.invalid &&
+              formParceiros.get('horarioFuncionamento')?.touched
+            "
+            class="text-danger"
+          >
+            <small
+              *ngIf="formParceiros.get('horarioFuncionamento')?.errors?.['required']"
+              >O Horário de Funcionamento é obrigatório.</small
+            >
           </div>
         </div>
+        </div>
 
+      <!--Input Area de Atuação-->
         <div class="row">
           <div class="form-group col-12">
-            <label for="sites">Area de atuação</label>
+            <label for="areaAtuacao">Area de atuação</label>
             <input
               type="text"
-              id="sites"
-              name="sites"
+              id="areaAtuacao"
+              formControlName="areaAtuacao"
               class="form-control"
               placeholder="ex: Saúde, Educação, Meio Ambiente"
             />
+            <!--Validação Area de Atuação-->
+            <div
+              *ngIf="
+                formParceiros.get('areaAtuacao')?.invalid &&
+                formParceiros.get('areaAtuacao')?.touched
+              "
+              class="text-danger"
+            >
+              <small>A área de atuação é obrigatória.</small>
+            </div>
           </div>
-        </div>
+      </div>
+
+        <!--Input Anexo-->
+        <!--Input Anexo Logo-->
 
         <div class="row">
           <div class="form-group col-12 anexo">
@@ -189,7 +396,7 @@
               type="file"
               class="form-control-file"
               id="upload"
-              name="upload"
+              formControlName="logo"
               accept=".pdf,.doc,.docx,.jpg,.png"
               required
             />
@@ -206,7 +413,7 @@
               type="file"
               class="form-control-file"
               id="upload"
-              name="upload"
+              formControlName="documento"
               accept=".pdf,.doc,.docx,.jpg,.png"
               required
             />
@@ -214,9 +421,11 @@
           </div>
         </div>
 
+        <!--Botão Submit-->
+
         <div class="d-flex align-items-center justify-content-center">
           <div class="form-group">
-            <button type="submit" class="btn btn-enviar">Enviar</button>
+            <button type="submit" class="btn btn-enviar" [disabled]="formParceiros.invalid">Enviar</button>
           </div>
         </div>
       </form>

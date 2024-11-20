@@ -68,76 +68,191 @@
 
       <div *ngFor="let address of addresses; let i = index" class="m-3">
         <h5 class="d-flex justify-content-center">Endereço {{ i + 2 }}</h5>
-        <form class="p-3">
+
+        <!--Formulário Reativo-->
+        <form
+          [formGroup]="formPontoArrecadacaoOng"
+          (ngSubmit)="onSubmit()"
+          class="p-3"
+        >
+          <!--Input Logradouro-->
+
           <div class="row">
             <div class="form-group col-9">
-              <label for="endereco">Logradouro</label>
+              <label for="logradouro">Logradouro</label>
               <input
                 type="text"
-                id="endereco"
-                name="endereco"
+                id="logradouro"
+                formControlName="logradouro"
                 class="form-control"
                 placeholder="Rua Exemplo, 123"
               />
+
+              <!--Input Numero-->
             </div>
             <div class="form-group col-3">
-              <label for="endereco">Número</label>
+              <label for="numero">Número</label>
               <input
                 type="text"
-                id="endereco"
-                name="endereco"
+                id="numero"
+                formControlName="numero"
                 class="form-control"
               />
+
+              <!--Validação Numero-->
+              <div
+                *ngIf="
+                  formPontoArrecadacaoOng.get('numero')?.invalid &&
+                  formPontoArrecadacaoOng.get('numero')?.touched
+                "
+                class="text-danger"
+              >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('numero')?.errors?.['required']"
+                  >O número é obrigatório.</small
+                >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('numero')?.errors?.['minlength']"
+                  >O número deve ter no mínimo 2 caracteres.</small
+                >
+              </div>
             </div>
           </div>
 
+          <!--Input Bairro-->
+
           <div class="row">
             <div class="form-group col-4">
-              <label for="endereco">Bairro</label>
+              <label for="bairro">Bairro</label>
               <input
                 type="text"
-                id="endereco"
-                name="endereco"
+                id="bairro"
+                formControlName="bairro"
                 class="form-control"
                 placeholder="Bairro Exemplo"
               />
+
+              <!--Validação Bairro-->
+              <div
+                *ngIf="
+                  formPontoArrecadacaoOng.get('bairro')?.invalid &&
+                  formPontoArrecadacaoOng.get('bairro')?.touched
+                "
+                class="text-danger"
+              >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('bairro')?.errors?.['required']"
+                  >O bairro é obrigatório.</small
+                >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('bairro')?.errors?.['minlength']"
+                  >O bairro deve ter no mínimo 5 caracteres.</small
+                >
+              </div>
             </div>
+
+            <!--Input Cidade-->
+
             <div class="form-group col-4">
-              <label for="endereco">Cidade</label>
+              <label for="cidade">Cidade</label>
               <input
                 type="text"
-                id="endereco"
-                name="endereco"
+                id="cidade"
+                formControlName="cidade"
                 class="form-control"
                 placeholder="Cidade Exemplo"
               />
+
+              <!--Validação Cidade-->
+              <div
+                *ngIf="
+                  formPontoArrecadacaoOng.get('cidade')?.invalid &&
+                  formPontoArrecadacaoOng.get('cidade')?.touched
+                "
+                class="text-danger"
+              >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('cidade')?.errors?.['required']"
+                  >A cidade é obrigatório.</small
+                >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('numero')?.errors?.['minlength']"
+                  >A cidade deve ter no mínimo 2 caracteres.</small
+                >
+              </div>
             </div>
+
+            <!--Input Estado-->
+
             <div class="form-group col-4">
-              <label for="endereco">Estado</label>
+              <label for="estado">Estado</label>
               <input
                 type="text"
-                id="endereco"
-                name="endereco"
+                id="estado"
+                formControlName="estado"
                 class="form-control"
                 placeholder="ex: São Paulo"
               />
+
+              <!--Validação Estado-->
+              <div
+                *ngIf="
+                  formPontoArrecadacaoOng.get('endereco.estado')?.invalid &&
+                  formPontoArrecadacaoOng.get('endereco.estado')?.touched
+                "
+                class="text-danger"
+              >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('endereco.estado')?.errors?.['required']"
+                  >O estado é obrigatório.</small
+                >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('endereco.estado')?.errors?.['minlength']"
+                  >O estado deve ter no mínimo 2 caracteres.</small
+                >
+              </div>
             </div>
           </div>
 
+          <!--Input CEP-->
+
           <div class="row">
             <div class="form-group col-4">
-              <label for="endereco">CEP</label>
+              <label for="cep">CEP</label>
               <input
                 type="text"
                 id="endereco"
-                name="endereco"
+                formControlName="cep"
                 class="form-control"
                 placeholder="00000-000"
               />
+              <!--Validação Cep-->
+              <div
+                *ngIf="
+                  formPontoArrecadacaoOng.get('endereco.cep')?.invalid &&
+                  formPontoArrecadacaoOng.get('endereco.cep')?.touched
+                "
+                class="text-danger"
+              >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('endereco.cep')?.errors?.['required']"
+                  >O CEP é obrigatório.</small
+                >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('endereco.cep')?.errors?.['pattern']"
+                  >CEP inválido. Formato esperado: 00000-000.</small
+                >
+              </div>
             </div>
           </div>
         </form>
         <div class="d-flex gap-2 justify-content-center">
+          <button
+            [disabled]="formPontoArrecadacaoOng.invalid"
+            class="btn btn-primary mb-2"
+          >
+            Salvar
+          </button>
           <button (click)="removeAddressForm(i)" class="btn btn-danger mb-2">
             Remover Endereço
           </button>

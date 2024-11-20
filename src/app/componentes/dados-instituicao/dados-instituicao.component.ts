@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder,  FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -21,7 +21,7 @@ export class DadosInstituicaoComponent {
       telefone: ['', [Validators.required, Validators.pattern(/^\(\d{2}\) \d{5}-\d{4}$/)]],
       email: ['', [Validators.required, Validators.email]],
       endereco: this.fb.group({
-        logradouro: ['', Validators.required],
+        logradouro: [''],
         numero: ['',[Validators.required,Validators.minLength(2)]],
         bairro: ['', [Validators.required,Validators.minLength(5)]],
         cidade: ['', [Validators.required,Validators.minLength(2)]],

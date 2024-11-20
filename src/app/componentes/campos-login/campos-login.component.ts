@@ -16,12 +16,15 @@ export class CamposLoginComponent {
  constructor(private fb: FormBuilder){
 this.myForm = this.fb.group({
     email:['',Validators.required, Validators.email],
-    senha:['',Validators.required]
+    senha:['',Validators.required, Validators.minLength(6)]
   })
  }
 
 onSubmit(){
   console.log(this.myForm.value);
+  if(this.myForm.valid){
+    console.log(this.myForm.value)
+  }
 }
 
 }
