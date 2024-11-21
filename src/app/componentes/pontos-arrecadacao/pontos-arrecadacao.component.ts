@@ -16,7 +16,7 @@ export class PontosArrecadacaoComponent {
 
   constructor(private fb: FormBuilder){
     this.formPontoArrecadacaoOng = this.fb.group({
-        logradouro: [''],
+        logradouro: ['',[Validators.required]],
         numero: ['',[Validators.required,Validators.minLength(2)]],
         bairro: ['', [Validators.required,Validators.minLength(5)]],
         cidade: ['', [Validators.required,Validators.minLength(2)]],

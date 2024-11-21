@@ -11,18 +11,21 @@ import { RouterLink } from '@angular/router';
   styleUrl: './dados-representante.component.css'
 })
 export class DadosRepresentanteComponent {
-  myForm: FormGroup;
-  constructor(private fb: FormBuilder){
-    this.myForm = this.fb.group({
-      email:['',Validators.required, Validators.email],
-      CPF:['',Validators.required,Validators.minLength(11)],
-      nome:['',Validators.required,Validators.minLength(3)]
-    })
+  RepresentanteForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.RepresentanteForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],  // Usando array para validadores
+      CPF: ['', [Validators.required, Validators.minLength(11)]],  // Usando array para validadores
+      nome: ['', [Validators.required, Validators.minLength(3)]]  // Usando array para validadores
+    });
   }
-  onSubmit(){
-    console.log(this.myForm.value);
-    if(this.myForm.valid){
-      console.log(this.myForm.value)
+
+  onSubmit() {
+    if (this.RepresentanteForm.valid) {
+      console.log('Formulário válido:', this.RepresentanteForm.value);
+    } else {
+      console.log('Formulário inválido');
     }
   }
 }

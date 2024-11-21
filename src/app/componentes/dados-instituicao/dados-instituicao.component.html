@@ -178,18 +178,31 @@
 
         <!--Input Endereço-->
 
-        <div formGroupName="endereco">
+        
           <!--Input Logradouro-->
           <div class="row">
             <div class="form-group col-9">
-              <label for="endereco">Logradouro</label>
+              <label for="logradouro">Logradouro</label>
               <input
                 type="text"
-                id="endereco"
+                id="logradouro"
                 class="form-control"
                 placeholder="Rua Exemplo, 123"
                 formControlName="logradouro"
               />
+              <div
+                *ngIf="
+                  formOrganizacao.get('logradouro')?.invalid &&
+                  formOrganizacao.get('logradouro')?.touched
+                "
+                class="text-danger"
+              >
+                <small
+                  *ngIf="formOrganizacao.get('logradouro')?.errors?.['required']"
+                  >O logradouro é obrigatório.</small
+                >
+                
+              </div>
              </div>
 
             <!--Input Numero-->
@@ -205,17 +218,17 @@
               <!--Validação Numero-->
               <div
                 *ngIf="
-                  formOrganizacao.get('endereco.numero')?.invalid &&
-                  formOrganizacao.get('endereco.numero')?.touched
+                  formOrganizacao.get('numero')?.invalid &&
+                  formOrganizacao.get('numero')?.touched
                 "
                 class="text-danger"
               >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.numero')?.errors?.['required']"
+                  *ngIf="formOrganizacao.get('numero')?.errors?.['required']"
                   >O número é obrigatório.</small
                 >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.numero')?.errors?.['minlength']"
+                  *ngIf="formOrganizacao.get('numero')?.errors?.['minlength']"
                   >O número deve ter no mínimo 2 caracteres.</small
                 >
               </div>
@@ -238,17 +251,17 @@
               <!--Validação Bairro-->
               <div
                 *ngIf="
-                  formOrganizacao.get('endereco.bairro')?.invalid &&
-                  formOrganizacao.get('endereco.bairro')?.touched
+                  formOrganizacao.get('bairro')?.invalid &&
+                  formOrganizacao.get('bairro')?.touched
                 "
                 class="text-danger"
               >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.bairro')?.errors?.['required']"
+                  *ngIf="formOrganizacao.get('bairro')?.errors?.['required']"
                   >O bairro é obrigatório.</small
                 >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.bairro')?.errors?.['minlength']"
+                  *ngIf="formOrganizacao.get('bairro')?.errors?.['minlength']"
                   >O bairro deve ter no mínimo 5 caracteres.</small
                 >
               </div>
@@ -268,17 +281,17 @@
               <!--Validação Cidade-->
               <div
                 *ngIf="
-                  formOrganizacao.get('endereco.cidade')?.invalid &&
-                  formOrganizacao.get('endereco.cidade')?.touched
+                  formOrganizacao.get('cidade')?.invalid &&
+                  formOrganizacao.get('cidade')?.touched
                 "
                 class="text-danger"
               >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.cidade')?.errors?.['required']"
+                  *ngIf="formOrganizacao.get('cidade')?.errors?.['required']"
                   >A cidade é obrigatório.</small
                 >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.numero')?.errors?.['minlength']"
+                  *ngIf="formOrganizacao.get('numero')?.errors?.['minlength']"
                   >A cidade deve ter no mínimo 2 caracteres.</small
                 >
               </div>
@@ -299,17 +312,17 @@
               <!--Validação Estado-->
               <div
                 *ngIf="
-                  formOrganizacao.get('endereco.estado')?.invalid &&
-                  formOrganizacao.get('endereco.estado')?.touched
+                  formOrganizacao.get('estado')?.invalid &&
+                  formOrganizacao.get('estado')?.touched
                 "
                 class="text-danger"
               >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.estado')?.errors?.['required']"
+                  *ngIf="formOrganizacao.get('estado')?.errors?.['required']"
                   >O estado é obrigatório.</small
                 >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.estado')?.errors?.['minlength']"
+                  *ngIf="formOrganizacao.get('estado')?.errors?.['minlength']"
                   >O estado deve ter no mínimo 2 caracteres.</small
                 >
               </div>
@@ -332,17 +345,17 @@
               <!--Validação Cep-->
               <div
                 *ngIf="
-                  formOrganizacao.get('endereco.cep')?.invalid &&
-                  formOrganizacao.get('endereco.cep')?.touched
+                  formOrganizacao.get('cep')?.invalid &&
+                  formOrganizacao.get('cep')?.touched
                 "
                 class="text-danger"
               >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.cep')?.errors?.['required']"
+                  *ngIf="formOrganizacao.get('cep')?.errors?.['required']"
                   >O CEP é obrigatório.</small
                 >
                 <small
-                  *ngIf="formOrganizacao.get('endereco.cep')?.errors?.['pattern']"
+                  *ngIf="formOrganizacao.get('cep')?.errors?.['pattern']"
                   >CEP inválido. Formato esperado: 00000-000.</small
                 >
               </div>
@@ -359,8 +372,18 @@
               class="form-control"
               formControlName="chavePix"
             />
+            <div
+            *ngIf="
+              formOrganizacao.get('chavePix')?.invalid &&
+              formOrganizacao.get('chavePix')?.touched
+            "
+            class="text-danger"
+          >
+            <small>O tipo de instituição é obrigatório.</small>
           </div>
         </div>
+          
+        
 
         <!--Input Site-->
 
@@ -533,9 +556,12 @@
               type="submit"
               class="btn btn-enviar"
               [disabled]="formOrganizacao.invalid"
+              
             >
               Enviar
             </button>
+
+           
           </div>
         </div>
       </form>

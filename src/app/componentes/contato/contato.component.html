@@ -3,22 +3,54 @@
   <div class="form-logo">
     <img src="/img/logo.png" alt="Caritá logo" class="logoForm">
   </div>
-
+ 
   <!-- Seção do Formulário -->
   <div class="Form">
-    <form >
+    <form [formGroup]="ContatoForm">
       <h1 class="text-center mb-4">Formulário de Contato</h1>
       <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Nome Completo" required>
+        <input
+        formControlName="nome"
+        type="text"
+        class="form-control"
+        placeholder="Nome Completo"
+        required>
+        <div
+        *ngIf="ContatoForm.get('nome')?.invalid && ContatoForm.get('nome')?.touched"
+      >
+        <span class="text-danger ">Este campo não pode estar vazio</span>
+      </div>
+ 
       </div>
       <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Entre com um endereço de email válido" required>
+        <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        placeholder="Entre com um endereço de email válido"
+        required>
+        <div
+            *ngIf="ContatoForm.get('email')?.invalid && ContatoForm.get('email')?.touched"
+          >
+            <span class="text-danger ">Email Inválido</span>
+          </div>
       </div>
       <div class="mb-3">
-        <textarea class="form-control" rows="5" placeholder="Mensagem..." required></textarea>
+        <textarea
+        formControlName="mensagem"
+        class="form-control"
+        rows="5"
+        placeholder="Mensagem..."
+        required>
+        </textarea>
+        <div
+            *ngIf="ContatoForm.get('mensagem')?.invalid && ContatoForm.get('mensagem')?.touched"
+          >
+            <span class="text-danger ">Mensagem muito curta </span>
+          </div>
       </div>
       <div class="d-grid justify-content-center">
-        <button type="submit" class="btn botao">Enviar</button>
+        <button type="submit" class="btn botao" [disabled]="ContatoForm.invalid">Enviar</button>
       </div>
     </form>
   </div>

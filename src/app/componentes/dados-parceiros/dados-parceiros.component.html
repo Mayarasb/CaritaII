@@ -169,7 +169,7 @@
           </div>
         </div>
 
-        <!--Input subgrupo Endereço-->
+        
         <!--Input Logradouro-->
         <div class="row">
           <div class="form-group col-9">
@@ -181,7 +181,20 @@
               placeholder="Rua Exemplo, 123"
               formControlName="logradouro"
             />
+            <div
+                *ngIf="
+                  formParceiros.get('logradouro')?.invalid &&
+                  formParceiros.get('logradouro')?.touched
+                "
+                class="text-danger"
+              >
+                <small
+                  *ngIf="formParceiros.get('logradouro')?.errors?.['required']"
+                  >O logradouro é obrigatório.</small
+                >
           </div>
+        </div>
+        
 
           <!--Input Numero-->
 

@@ -16,18 +16,13 @@
               routerLink="/pagina-ong"
               class="nav-link active"
               aria-current="page"
-              >Dados Instituição</a
-            >
+            >Dados Instituição</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/pagina-representante" class="nav-link"
-              >Dados Representante da Organização</a
-            >
+            <a routerLink="/pagina-representante" class="nav-link">Dados Representante da Organização</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/pagina-pontosArrecadacao" class="nav-link"
-              >Cadastrar Ponto de Arrecadação</a
-            >
+            <a routerLink="/pagina-pontosArrecadacao" class="nav-link">Cadastrar Ponto de Arrecadação</a>
           </li>
           <li class="nav-item">
             <a routerLink="/pagina-desativarOng" class="nav-link">Desativar</a>
@@ -37,25 +32,23 @@
     </div>
 
     <div class="main-content flex-grow-1">
-      <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="form-content container-fluid">
+      <form [formGroup]="RepresentanteForm" (ngSubmit)="onSubmit()" class="form-content container-fluid">
         <h2 class="text-center">Dados do Representante</h2>
 
         <div class="row align-items-center">
           <div class="form-group col-11">
             <label for="org-name">Nome</label>
             <input
-            formControlName="nome"
+              formControlName="nome"
               type="text"
               id="org-name"
               name="org-name"
               class="form-control"
               placeholder="Nome completo"
             />
-            <div
-            *ngIf="myForm.get('nome')?.invalid && myForm.get('nome')?.touched"
-          >
-            <span class="text-danger ">O campo não pode estar vazio</span>
-          </div>
+            <div *ngIf="RepresentanteForm.get('nome')?.invalid && RepresentanteForm.get('nome')?.touched">
+              <span class="text-danger">O campo não pode estar vazio</span>
+            </div>
           </div>
         </div>
 
@@ -64,18 +57,16 @@
           <div class="form-group col-11">
             <label for="cpf">CPF</label>
             <input
-            formControlName="CPF"
+              formControlName="CPF"
               type="text"
               id="cpf"
               name="cpf"
               class="form-control"
               placeholder="000.000.000-00"
             />
-            <div
-            *ngIf="myForm.get('CPF')?.invalid && myForm.get('CPF')?.touched"
-          >
-            <span class="text-danger ">O CPF deve conter 11 digitos</span>
-          </div>
+            <div *ngIf="RepresentanteForm.get('CPF')?.invalid && RepresentanteForm.get('CPF')?.touched">
+              <span class="text-danger">O CPF deve conter 11 digitos</span>
+            </div>
           </div>
         </div>
 
@@ -83,60 +74,45 @@
           <div class="form-group col-11">
             <label for="email">Email</label>
             <input
-            formControlName="email"
+              formControlName="email"
               type="email"
               id="email"
               name="email"
               class="form-control"
               placeholder="exemplo@dominio.com"
             />
-            <div
-            *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched"
-          >
-            <span class="text-danger ">Email Inválido</span>
-          </div>
+            <div *ngIf="RepresentanteForm.get('email')?.invalid && RepresentanteForm.get('email')?.touched">
+              <span class="text-danger">Email Inválido</span>
+            </div>
           </div>
         </div>
 
-        <!--Modal-->
+        <div class="alert col-11">
+          <span>
+            Ao atualizar o representante, o novo indicado receberá um e-mail com as instruções para aceitar a responsabilidade. Após a aceitação, todos os acessos administrativos serão concedidos ao novo representante
+            
+          </span>
+          
+        </div>
 
-<!-- Button trigger modal -->
- <div class="d-flex justify-content-center">
-<button  type="button" class="btn btn-enviar" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Alterar
-</button>
-</div>
+        
+        <!-- Button  -->
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-enviar" [disabled]="RepresentanteForm.invalid">
+            Alterar
+          </button>
+        </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Alterar Representante</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>
-          Desativar a conta removerá a organização do site, ocultando
-          todas as informações públicas. Para reativar a conta no futuro,
-          será necessário entrar em contato conosco pelo formulário de
-          contato.
-        </p>
-        <p>Deseja continuar com a alteração?</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
+        
+             
+              
+                
+              
+            
+          
+        
 
       </form>
     </div>
   </div>
 </div>
- 

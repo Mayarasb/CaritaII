@@ -19,6 +19,7 @@ import { PontosArrecadacaoParceiroComponent } from './componentes/pontos-arrecad
 import { FomeVotorantimNoticiaComponent } from './componentes/fome-votorantim-noticia/fome-votorantim-noticia.component';
 import { AlimentosNoticiasComponent } from './componentes/alimentos-noticias/alimentos-noticias.component';
 import { DoacaoNoticiasComponent } from './componentes/doacao-noticias/doacao-noticias.component';
+import { PaginaPixComponent } from './componentes/pagina-pix/pagina-pix.component';
 
 export const routes: Routes = [
     {path: '', component: MainComponent },
@@ -40,6 +41,7 @@ export const routes: Routes = [
     {path: 'noticia-fomeVotorantim', component: FomeVotorantimNoticiaComponent},
     {path: 'noticia-alimentos', component: AlimentosNoticiasComponent},
     {path: 'noticia-doacao', component: DoacaoNoticiasComponent},
+    {path: 'pagina-pix', component: PaginaPixComponent},
 
 
 

@@ -87,9 +87,21 @@
                 class="form-control"
                 placeholder="Rua Exemplo, 123"
               />
-
-              <!--Input Numero-->
+              <div
+              *ngIf="
+                formPontoArrecadacaoOng.get('logradouro')?.invalid &&
+                formPontoArrecadacaoOng.get('logradouro')?.touched
+              "
+              class="text-danger"
+            >
+              <small
+                *ngIf="formPontoArrecadacaoOng.get('logradouro')?.errors?.['required']"
+                >O logradouro é obrigatório.</small
+              >
             </div>
+          </div>
+
+             <!--Input Numero-->
             <div class="form-group col-3">
               <label for="numero">Número</label>
               <input

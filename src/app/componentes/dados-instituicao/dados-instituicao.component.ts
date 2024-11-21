@@ -12,7 +12,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './dados-instituicao.component.css'
 })
 export class DadosInstituicaoComponent {
+
+ 
   formOrganizacao: FormGroup;
+ 
 
   constructor(private fb: FormBuilder){
     this.formOrganizacao = this.fb.group({
@@ -20,15 +23,14 @@ export class DadosInstituicaoComponent {
       cnpj: ['', [Validators.required, Validators.pattern(/^\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$/)]],
       telefone: ['', [Validators.required, Validators.pattern(/^\(\d{2}\) \d{5}-\d{4}$/)]],
       email: ['', [Validators.required, Validators.email]],
-      endereco: this.fb.group({
-        logradouro: [''],
-        numero: ['',[Validators.required,Validators.minLength(2)]],
-        bairro: ['', [Validators.required,Validators.minLength(5)]],
-        cidade: ['', [Validators.required,Validators.minLength(2)]],
-        estado: ['', [Validators.required,Validators.minLength(2)]],
-        cep: ['', [Validators.required, Validators.pattern(/^\d{5}-\d{3}$/)]],
-      }),
-      chavePix: [''],
+      logradouro: ['', [Validators.required]],
+      numero: ['',[Validators.required,Validators.minLength(2)]],
+      bairro: ['', [Validators.required,Validators.minLength(5)]],
+      cidade: ['', [Validators.required,Validators.minLength(2)]],
+      estado: ['', [Validators.required,Validators.minLength(2)]],
+      cep: ['', [Validators.required, Validators.pattern(/^\d{5}-\d{3}$/)]],
+      
+      chavePix: ['',[Validators.required]],
       site: [''],
       tipoInstituicao: ['', Validators.required],
       anoFundacao: ['', [Validators.required, Validators.pattern(/^\d{4}$/)]],
@@ -42,9 +44,13 @@ export class DadosInstituicaoComponent {
   onSubmit() {
     if (this.formOrganizacao.valid) {
       console.log('Formulário válido:', this.formOrganizacao.value);
+     
+
     } else {
       console.log('Formulário inválido');
     }
   }
+
+ 
 }
 

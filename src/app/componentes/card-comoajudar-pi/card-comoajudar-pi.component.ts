@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CardsInformativos } from '../../models/cards-informativos';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-comoajudar-pi',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './card-comoajudar-pi.component.html',
   styleUrl: './card-comoajudar-pi.component.css'
 })

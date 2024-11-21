@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CardsInformativos } from '../../models/cards-informativos';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-card-informativo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './card-somoscarita.html',
   styleUrl: './card-somoscarita.component.css'
 })
