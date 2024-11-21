@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { PaginaUsuarioComponent } from './componentes/pagina-usuario/pagina-usuario.component';
 import { PaginaSobreComponent } from './componentes/pagina-sobre/pagina-sobre.component';
 import { MainComponent } from './main/main.component';
 import { PaginaConteudoComponent } from './componentes/pagina-conteudo/pagina-conteudo.component';

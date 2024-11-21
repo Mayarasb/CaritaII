@@ -1,19 +1,23 @@
+<!--Card Como Ajudar: Página Principal-->
+<!--Função For passando pelos dados CardsInformativos para seleção de dados-->
 <div *ngFor="let CardsInformativos of comoAjudar" class="meioinf">
+  <!--Seleção Imagem-->
   <div class="imgmeioinf">
     <img src="{{ CardsInformativos.image }}" alt="imgmeioinf" id="imgmeioinf" />
   </div>
+  <!--Div conteudo meio Texto-->
   <div class="contmeioinf">
     <div class="textogmeioinf">
+      <!--Seleção título-->
       <h1 id="textog">{{ CardsInformativos.title }}</h1>
     </div>
     <div class="textopmeioinf">
+      <!--Seleção Descrição-->
       <p id="textop">{{ CardsInformativos.description }}</p>
     </div>
     <div class="botaomeioinf">
-      <button
-        class="btn"
-        id="botao"
-        >
+      <button class="btn" id="botao">
+        <!--Seleção botão com rota-->
         <a routerLink="/pagina-comoAjudar">{{ CardsInformativos.button }}</a>
       </button>
     </div>

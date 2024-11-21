@@ -1,5 +1,8 @@
+<!--Dados Representante Parceiros-->
 <div class="container-fluid main-content">
+  <!-- Conteudo Pagina-->
   <div class="page-container">
+    <!--SideBar-->
     <div class="sidebar">
       <div class="sidebar-content">
         <div class="dados-instituição d-flex flex-column align-items-center">
@@ -38,10 +41,17 @@
       </div>
     </div>
 
+    <!--Form Reativo-->
+
     <div class="main-content flex-grow-1">
-      <form [formGroup]="RepresentanteParceirosForm" (ngSubmit)="onSubmit()" class="form-content container-fluid">
+      <form
+        [formGroup]="RepresentanteParceirosForm"
+        (ngSubmit)="onSubmit()"
+        class="form-content container-fluid"
+      >
         <h2 class="text-center">Dados do Representante</h2>
 
+        <!--INput Nome-->
         <div class="row align-items-center">
           <div class="form-group col-11">
             <label for="org-name">Nome</label>
@@ -53,13 +63,20 @@
               class="form-control"
               placeholder="Nome completo"
             />
-            <div *ngIf="RepresentanteParceirosForm.get('nome')?.invalid && RepresentanteParceirosForm.get('nome')?.touched">
+
+            <!--Validação Nome-->
+            <div
+              *ngIf="
+                RepresentanteParceirosForm.get('nome')?.invalid &&
+                RepresentanteParceirosForm.get('nome')?.touched
+              "
+            >
               <span class="text-danger">O campo não pode estar vazio</span>
             </div>
           </div>
         </div>
 
-        <!-- Campo de CPF com botão de edição -->
+        <!-- Input de CPF  -->
         <div class="row align-items-center mt-3">
           <div class="form-group col-11">
             <label for="cpf">CPF</label>
@@ -71,12 +88,19 @@
               class="form-control"
               placeholder="000.000.000-00"
             />
-            <div *ngIf="RepresentanteParceirosForm.get('CPF')?.invalid && RepresentanteParceirosForm.get('CPF')?.touched">
+            <!--Validação CPF-->
+            <div
+              *ngIf="
+                RepresentanteParceirosForm.get('CPF')?.invalid &&
+                RepresentanteParceirosForm.get('CPF')?.touched
+              "
+            >
               <span class="text-danger">O CPF deve conter 11 digitos</span>
             </div>
           </div>
         </div>
 
+        <!--Input Email-->
         <div class="row align-items-center mt-3">
           <div class="form-group col-11">
             <label for="email">Email</label>
@@ -88,29 +112,40 @@
               class="form-control"
               placeholder="exemplo@dominio.com"
             />
-            <div *ngIf="RepresentanteParceirosForm.get('email')?.invalid && RepresentanteParceirosForm.get('email')?.touched">
+
+            <!--Validação Email-->
+            <div
+              *ngIf="
+                RepresentanteParceirosForm.get('email')?.invalid &&
+                RepresentanteParceirosForm.get('email')?.touched
+              "
+            >
               <span class="text-danger">Email Inválido</span>
             </div>
           </div>
         </div>
 
+        <!--Termos-->
+
         <div class="alert col-11">
           <span>
-            Ao atualizar o representante, o novo indicado receberá um e-mail com as instruções para aceitar a responsabilidade. Após a aceitação, todos os acessos administrativos serão concedidos ao novo representante
-            
+            Ao atualizar o representante, o novo indicado receberá um e-mail com
+            as instruções para aceitar a responsabilidade. Após a aceitação,
+            todos os acessos administrativos serão concedidos ao novo
+            representante
           </span>
-          
         </div>
 
-        
         <!-- Button  -->
         <div class="d-flex justify-content-center">
-          <button type="button" class="btn btn-enviar" [disabled]="RepresentanteParceirosForm.invalid">
+          <button
+            type="submit"
+            class="btn btn-enviar"
+            [disabled]="RepresentanteParceirosForm.invalid"
+          >
             Alterar
           </button>
         </div>
-
-        
       </form>
     </div>
   </div>

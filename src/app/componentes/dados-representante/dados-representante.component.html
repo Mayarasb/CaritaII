@@ -1,5 +1,9 @@
+<!--Dados Representante Ongs-->
 <div class="container-fluid main-content">
+  <!-- Conteudo Página-->
   <div class="page-container">
+
+    <!--Sidebar-->
     <div class="sidebar">
       <div class="sidebar-content">
         <div class="dados-instituição d-flex flex-column align-items-center">
@@ -31,9 +35,12 @@
       </div>
     </div>
 
+    <!--Reactive Forms-->
     <div class="main-content flex-grow-1">
       <form [formGroup]="RepresentanteForm" (ngSubmit)="onSubmit()" class="form-content container-fluid">
         <h2 class="text-center">Dados do Representante</h2>
+
+        <!--Input Nome-->
 
         <div class="row align-items-center">
           <div class="form-group col-11">
@@ -46,13 +53,15 @@
               class="form-control"
               placeholder="Nome completo"
             />
+
+            <!-- Validação Nome -->
             <div *ngIf="RepresentanteForm.get('nome')?.invalid && RepresentanteForm.get('nome')?.touched">
               <span class="text-danger">O campo não pode estar vazio</span>
             </div>
           </div>
         </div>
 
-        <!-- Campo de CPF com botão de edição -->
+        <!-- Input de CPF -->
         <div class="row align-items-center mt-3">
           <div class="form-group col-11">
             <label for="cpf">CPF</label>
@@ -64,11 +73,15 @@
               class="form-control"
               placeholder="000.000.000-00"
             />
+
+            <!--Validação CPF-->
             <div *ngIf="RepresentanteForm.get('CPF')?.invalid && RepresentanteForm.get('CPF')?.touched">
               <span class="text-danger">O CPF deve conter 11 digitos</span>
             </div>
           </div>
         </div>
+
+        <!--Input Email-->
 
         <div class="row align-items-center mt-3">
           <div class="form-group col-11">
@@ -81,12 +94,15 @@
               class="form-control"
               placeholder="exemplo@dominio.com"
             />
+
+            <!-- Validação Email -->
             <div *ngIf="RepresentanteForm.get('email')?.invalid && RepresentanteForm.get('email')?.touched">
               <span class="text-danger">Email Inválido</span>
             </div>
           </div>
         </div>
 
+        <!--Termos -->
         <div class="alert col-11">
           <span>
             Ao atualizar o representante, o novo indicado receberá um e-mail com as instruções para aceitar a responsabilidade. Após a aceitação, todos os acessos administrativos serão concedidos ao novo representante
@@ -98,7 +114,7 @@
         
         <!-- Button  -->
         <div class="d-flex justify-content-center">
-          <button type="button" class="btn btn-enviar" [disabled]="RepresentanteForm.invalid">
+          <button type="submit" class="btn btn-enviar" [disabled]="RepresentanteForm.invalid">
             Alterar
           </button>
         </div>

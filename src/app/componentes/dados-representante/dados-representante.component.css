@@ -68,3 +68,12 @@ width: 30%;
 
     
   }
+
+
+  form {
+    position: relative;
+  }
+  
+  .alert {
+    transition: opacity 0.3s ease-in-out;
+  }

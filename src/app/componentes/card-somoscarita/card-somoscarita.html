@@ -1,5 +1,9 @@
+<!--Card Somso Carita (Pagina Inicial)-->
 <div class="card meioinf" id="meiosup">
+  <!--Div Função For percorrer Cards Informitivos com dados somosCarita-->
   <div *ngFor="let CardsInformativos of somosCarita" class="row g-1">
+
+    <!--Div Imagem-->
     <div class="col-md-4">
       <img
         src="{{CardsInformativos.image}}"
@@ -8,13 +12,18 @@
         id="imgmeiosup"
       />
     </div>
+
+    <!--Div Título-->
     <div class="col-6 card-body" id="contmeiosup">
+      <!--Título-->
       <h1 id="textog" class="display-4 card-title">
         {{CardsInformativos.title}}
       </h1>
+      <!--Descrição-->
       <p id="textop" class="lead card-text">
         {{CardsInformativos.description}}
       </p>
+      <!--Botão com rota-->
       <a routerLink="/pagina-sobre" class="btn btn-primary btn-lg" id="botao1"
         >{{CardsInformativos.button}}</a
       >

@@ -1,64 +1,83 @@
+<!--Div Body Campos Cadastro-->
 <div class="body">
+  <!--Alinhar itens no centro-->
   <div
     class="container d-flex justify-content-center align-items-center vh-100"
   >
+    <!-- Div Login-->
     <div class="cadastro-container">
-      <form [formGroup]="myForm"class="cadastro-form p-4" (ngSubmit)="onSubmit()">
+      <!--Form com Campos Login-->
+      <form
+        [formGroup]="myForm"
+        class="cadastro-form p-4"
+        (ngSubmit)="onSubmit()"
+      >
         <h2 class="text-center mb-4">Cadastro</h2>
+
+        <!--Div input Email-->
         <div class="mb-3">
           <input
-          formControlName="email"
+            formControlName="email"
             type="email"
             class="form-control"
             placeholder="Insira seu email"
             required
           />
+          <!--Validação Email-->
           <div
             *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched"
           >
-            <span class="text-danger ">Email Inválido</span>
+            <span class="text-danger">Email Inválido</span>
           </div>
         </div>
+
+        <!--Div inputCPF-->
         <div class="mb-3">
           <input
-          formControlName="CPF"
+            formControlName="CPF"
             type="text"
             class="form-control"
             placeholder="Insira seu CPF"
             required
           />
-          <div
-            *ngIf="myForm.get('CPF')?.invalid && myForm.get('CPF')?.touched"
-          >
-            <span class="text-danger ">O CPF deve conter 11 digitos </span>
+
+          <!--Validação CPF-->
+          <div *ngIf="myForm.get('CPF')?.invalid && myForm.get('CPF')?.touched">
+            <span class="text-danger">O CPF deve conter 11 digitos </span>
           </div>
         </div>
+
+        <!--Div Input Senha-->
         <div class="mb-3">
           <input
-          formControlName="senha"
+            formControlName="senha"
             type="password"
             class="form-control"
             placeholder="Insira sua senha"
             required
           />
+
+          <!--Validação Senha-->
           <div
             *ngIf="myForm.get('senha')?.invalid && myForm.get('senha')?.touched"
           >
-            <span class="text-danger ">sua senha deve conter pelo menos 6 caractere </span>
+            <span class="text-danger"
+              >sua senha deve conter pelo menos 6 caractere
+            </span>
           </div>
         </div>
+
+        <!--Botão Entrar-->
         <div class="d-grid gap-2">
-          <button type="submit"  class="btn btn-primary">
-            <a routerLink="/pagina-preCadastro" class="text-white text-decoration-none"
+          <button type="submit" class="btn btn-primary">
+            <a
+              routerLink="/pagina-preCadastro"
+              class="text-white text-decoration-none"
               >Entrar</a
             >
           </button>
-        </div>
-        <div class="text-center mt-3">
-          <a routerLink="/pagina-cadastro">Criar conta</a>
         </div>
       </form>
     </div>
   </div>
 </div>
- 

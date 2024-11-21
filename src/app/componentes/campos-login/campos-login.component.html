@@ -1,10 +1,16 @@
+<!--Div Body Campos Login-->
 <div class="body">
+  <!--Alinha Itens no centro-->
   <div
     class="container d-flex justify-content-center align-items-center vh-100"
   >
+    <!--Container Login-->
     <div class="login-container">
+      <!--Form Campos Login-->
       <form [formGroup]="myForm" class="login-form p-4">
         <h2 class="text-center mb-4">Login</h2>
+
+        <!--Input Email-->
         <div class="mb-3">
           <input
             formControlName="email"
@@ -13,11 +19,15 @@
             placeholder="Insira seu email"
             required
           />
+
+          <!--Validação Email-->
           <div
             *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched"
           >
-            <span class="text-danger ">Email Inválido</span>
+            <span class="text-danger">Email Inválido</span>
           </div>
+
+          <!--Input Senha-->
         </div>
         <div class="mb-3">
           <input
@@ -27,12 +37,18 @@
             placeholder="Insira sua senha"
             required
           />
+
+          <!--Validação Senha-->
           <div
             *ngIf="myForm.get('senha')?.invalid && myForm.get('senha')?.touched"
           >
-            <span class="text-danger "> sua senha deve conter pelo menos 6 caracteres</span>
+            <span class="text-danger">
+              sua senha deve conter pelo menos 6 caracteres</span
+            >
           </div>
         </div>
+
+        <!--Botão Entrar-->
         <div class="d-grid gap-2">
           <button type="submit" (click)="onSubmit()" class="btn btn-primary">
             <a
@@ -41,6 +57,8 @@
               >Entrar</a
             >
           </button>
+
+          <!--Link para página de Cadastro-->
         </div>
         <div class="text-center mt-3">
           <a routerLink="/pagina-cadastro">Criar conta</a>

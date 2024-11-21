@@ -1,4 +1,4 @@
-body {
+.body {
     background-color: var(--cor-primaria); /* Cor de fundo personalizada */
     color: var(--cor-textoSecundaria);
     padding: 10px;

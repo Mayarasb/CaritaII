@@ -1,5 +1,8 @@
+<!--Pontos de Arrecadação Ongs-->
 <div class="container-fluid main-content">
+  <!--Conteudo Pagina-->
   <div class="page-container">
+    <!--SideBar-->
     <div class="sidebar">
       <div class="sidebar-content">
         <div class="dados-instituição d-flex flex-column align-items-center">
@@ -36,6 +39,8 @@
       </div>
     </div>
 
+    <!--Pontos de Arrecadação-->
+
     <div class="main-content flex-grow-1 m-2">
       <div class="m-2 p-2">
         <h2 class="text-center title">Ponto de Arrecadação</h2>
@@ -44,6 +49,8 @@
           >Deseja utilizar o endereço fornecido para ser um dos nossos ponto de
           arrecadação de alimentos?</label
         >
+
+        <!--Inputs Radios: Sim-->
         <div class="form-check">
           <input
             class="form-check-input"
@@ -54,6 +61,8 @@
           />
           <label class="form-check-label" for="yes-option"> Sim </label>
         </div>
+
+        <!--Inputs Radios: Não-->
         <div class="form-check">
           <input
             class="form-check-input"
@@ -65,6 +74,8 @@
           <label class="form-check-label" for="no-option"> Não </label>
         </div>
       </div>
+
+      <!--Adicionar ou Remover novos endereços-->
 
       <div *ngFor="let address of addresses; let i = index" class="m-3">
         <h5 class="d-flex justify-content-center">Endereço {{ i + 2 }}</h5>
@@ -258,16 +269,23 @@
             </div>
           </div>
         </form>
+
+        <!--Botão Salvar Submit-->
         <div class="d-flex gap-2 justify-content-center">
           <button
+            type="submit"
             [disabled]="formPontoArrecadacaoOng.invalid"
             class="btn btn-primary mb-2"
           >
             Salvar
           </button>
+
+          <!--Botão Remover-->
           <button (click)="removeAddressForm(i)" class="btn btn-danger mb-2">
             Remover Endereço
           </button>
+
+          <!--Botão Adicionar-->
           <button
             *ngIf="addresses.length < 3"
             (click)="addAddressForm()"
@@ -277,6 +295,7 @@
           </button>
         </div>
       </div>
+
       <div class="d-flex justify-content-center">
         <button
           *ngIf="addresses.length === 0"
@@ -286,6 +305,8 @@
           Adicionar Endereço
         </button>
       </div>
+
+      <!--Termos de Parceria-->
 
       <div class="container mt-5">
         <div class="card">
@@ -322,6 +343,8 @@
             </p>
           </div>
         </div>
+
+        <!--Botão Aceitar Termos-->
         <div class="text-center">
           <button type="button" class="btn btn-enviar mb-3">
             Aceitar Termos e Continuar

@@ -1,5 +1,8 @@
+<!--Pontos Arrecadação Ongs-->
 <div class="container-fluid main-content">
+  <!--Conteudo Pagina-->
   <div class="page-container">
+    <!--SideBar-->
     <div class="sidebar">
       <div class="sidebar-content">
         <div class="dados-instituição d-flex flex-column align-items-center">
@@ -38,6 +41,7 @@
       </div>
     </div>
 
+    <!--Pontos Arrecadação-->
     <div class="main-content flex-grow-1 m-2">
       <div class="m-2 p-2">
         <h2 class="text-center title">Ponto de Arrecadação</h2>
@@ -46,6 +50,8 @@
           >Deseja utilizar o endereço fornecido para ser um dos nossos ponto de
           arrecadação de alimentos?</label
         >
+
+        <!--Input Radio: Sim-->
         <div class="form-check">
           <input
             class="form-check-input"
@@ -56,6 +62,8 @@
           />
           <label class="form-check-label" for="yes-option"> Sim </label>
         </div>
+
+        <!--Input Radio: Não-->
         <div class="form-check">
           <input
             class="form-check-input"
@@ -68,6 +76,7 @@
         </div>
       </div>
 
+      <!--Adicionar/ Remover Endereço-->
       <div *ngFor="let address of addresses; let i = index" class="m-3">
         <h5 class="d-flex justify-content-center">Endereço {{ i + 2 }}</h5>
 
@@ -90,19 +99,17 @@
                 placeholder="Rua Exemplo, 123"
               />
               <div
-              *ngIf="
-                formPontoArrecadacaoParceiro.get('logradouro')?.invalid &&
-                formPontoArrecadacaoParceiro.get('logradouro')?.touched
-              "
-              class="text-danger"
-            >
-              <small
-                *ngIf="formPontoArrecadacaoParceiro.get('logradouro')?.errors?.['required']"
-                >O logradouro é obrigatório.</small
+                *ngIf="
+                  formPontoArrecadacaoParceiro.get('logradouro')?.invalid &&
+                  formPontoArrecadacaoParceiro.get('logradouro')?.touched
+                "
+                class="text-danger"
               >
-            </div>
-
-              
+                <small
+                  *ngIf="formPontoArrecadacaoParceiro.get('logradouro')?.errors?.['required']"
+                  >O logradouro é obrigatório.</small
+                >
+              </div>
             </div>
             <!--Input Numero-->
             <div class="form-group col-3">
@@ -212,7 +219,8 @@
               <!--Validação Estado-->
               <div
                 *ngIf="
-                  formPontoArrecadacaoParceiro.get('endereco.estado')?.invalid &&
+                  formPontoArrecadacaoParceiro.get('endereco.estado')
+                    ?.invalid &&
                   formPontoArrecadacaoParceiro.get('endereco.estado')?.touched
                 "
                 class="text-danger"
@@ -261,6 +269,8 @@
             </div>
           </div>
         </form>
+
+        <!--Botão Salvar-->
         <div class="d-flex gap-2 justify-content-center">
           <button
             [disabled]="formPontoArrecadacaoParceiro.invalid"
@@ -268,9 +278,13 @@
           >
             Salvar
           </button>
+
+          <!--Botão Remover-->
           <button (click)="removeAddressForm(i)" class="btn btn-danger mb-2">
             Remover Endereço
           </button>
+
+          <!--Botão Adicionar-->
           <button
             *ngIf="addresses.length < 3"
             (click)="addAddressForm()"
@@ -280,6 +294,7 @@
           </button>
         </div>
       </div>
+
       <div class="d-flex justify-content-center">
         <button
           *ngIf="addresses.length === 0"
@@ -289,6 +304,8 @@
           Adicionar Endereço
         </button>
       </div>
+
+      <!-- Termos de Parceris-->
 
       <div class="container mt-5">
         <div class="card">
@@ -325,6 +342,8 @@
             </p>
           </div>
         </div>
+
+        <!-- Botão Aceitar Termos-->
         <div class="text-center">
           <button type="button" class="btn btn-enviar mb-3">
             Aceitar Termos e Continuar
@@ -334,4 +353,3 @@
     </div>
   </div>
 </div>
-

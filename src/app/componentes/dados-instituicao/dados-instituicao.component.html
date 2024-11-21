@@ -178,201 +178,193 @@
 
         <!--Input Endereço-->
 
-        
-          <!--Input Logradouro-->
-          <div class="row">
-            <div class="form-group col-9">
-              <label for="logradouro">Logradouro</label>
-              <input
-                type="text"
-                id="logradouro"
-                class="form-control"
-                placeholder="Rua Exemplo, 123"
-                formControlName="logradouro"
-              />
-              <div
-                *ngIf="
-                  formOrganizacao.get('logradouro')?.invalid &&
-                  formOrganizacao.get('logradouro')?.touched
-                "
-                class="text-danger"
-              >
-                <small
-                  *ngIf="formOrganizacao.get('logradouro')?.errors?.['required']"
-                  >O logradouro é obrigatório.</small
-                >
-                
-              </div>
-             </div>
-
-            <!--Input Numero-->
-
-            <div class="form-group col-3">
-              <label for="numero">Número</label>
-              <input
-                type="text"
-                id="numero"
-                class="form-control"
-                formControlName="numero"
-              />
-              <!--Validação Numero-->
-              <div
-                *ngIf="
-                  formOrganizacao.get('numero')?.invalid &&
-                  formOrganizacao.get('numero')?.touched
-                "
-                class="text-danger"
-              >
-                <small
-                  *ngIf="formOrganizacao.get('numero')?.errors?.['required']"
-                  >O número é obrigatório.</small
-                >
-                <small
-                  *ngIf="formOrganizacao.get('numero')?.errors?.['minlength']"
-                  >O número deve ter no mínimo 2 caracteres.</small
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--Input Bairro-->
-
-          <div class="row">
-            <div class="form-group col-4">
-              <label for="bairro">Bairro</label>
-              <input
-                type="text"
-                id="bairro"
-                class="form-control"
-                placeholder="Bairro Exemplo"
-                formControlName="bairro"
-              />
-
-              <!--Validação Bairro-->
-              <div
-                *ngIf="
-                  formOrganizacao.get('bairro')?.invalid &&
-                  formOrganizacao.get('bairro')?.touched
-                "
-                class="text-danger"
-              >
-                <small
-                  *ngIf="formOrganizacao.get('bairro')?.errors?.['required']"
-                  >O bairro é obrigatório.</small
-                >
-                <small
-                  *ngIf="formOrganizacao.get('bairro')?.errors?.['minlength']"
-                  >O bairro deve ter no mínimo 5 caracteres.</small
-                >
-              </div>
-            </div>
-
-            <!--Input Cidade-->
-
-            <div class="form-group col-4">
-              <label for="cidade">Cidade</label>
-              <input
-                type="text"
-                id="cidade"
-                class="form-control"
-                placeholder="Cidade Exemplo"
-                formControlName="cidade"
-              />
-              <!--Validação Cidade-->
-              <div
-                *ngIf="
-                  formOrganizacao.get('cidade')?.invalid &&
-                  formOrganizacao.get('cidade')?.touched
-                "
-                class="text-danger"
-              >
-                <small
-                  *ngIf="formOrganizacao.get('cidade')?.errors?.['required']"
-                  >A cidade é obrigatório.</small
-                >
-                <small
-                  *ngIf="formOrganizacao.get('numero')?.errors?.['minlength']"
-                  >A cidade deve ter no mínimo 2 caracteres.</small
-                >
-              </div>
-            </div>
-
-            <!--Input Estado-->
-
-            <div class="form-group col-4">
-              <label for="estado">Estado</label>
-              <input
-                type="text"
-                id="estado"
-                class="form-control"
-                placeholder="ex: São Paulo"
-                formControlName="estado"
-              />
-
-              <!--Validação Estado-->
-              <div
-                *ngIf="
-                  formOrganizacao.get('estado')?.invalid &&
-                  formOrganizacao.get('estado')?.touched
-                "
-                class="text-danger"
-              >
-                <small
-                  *ngIf="formOrganizacao.get('estado')?.errors?.['required']"
-                  >O estado é obrigatório.</small
-                >
-                <small
-                  *ngIf="formOrganizacao.get('estado')?.errors?.['minlength']"
-                  >O estado deve ter no mínimo 2 caracteres.</small
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--Input CEP-->
-
-          <div class="row">
-            <div class="form-group col-4">
-              <label for="cep">CEP</label>
-              <input
-                type="text"
-                id="cep"
-                class="form-control"
-                placeholder="00000-000"
-                formControlName="cep"
-              />
-
-              <!--Validação Cep-->
-              <div
-                *ngIf="
-                  formOrganizacao.get('cep')?.invalid &&
-                  formOrganizacao.get('cep')?.touched
-                "
-                class="text-danger"
-              >
-                <small
-                  *ngIf="formOrganizacao.get('cep')?.errors?.['required']"
-                  >O CEP é obrigatório.</small
-                >
-                <small
-                  *ngIf="formOrganizacao.get('cep')?.errors?.['pattern']"
-                  >CEP inválido. Formato esperado: 00000-000.</small
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--Input Chave Pix-->
-
-          <div class="form-group col-12">
-            <label for="chave-pix">Chave-Pix</label>
+        <!--Input Logradouro-->
+        <div class="row">
+          <div class="form-group col-9">
+            <label for="logradouro">Logradouro</label>
             <input
               type="text"
-              id="chave-pix"
+              id="logradouro"
               class="form-control"
-              formControlName="chavePix"
+              placeholder="Rua Exemplo, 123"
+              formControlName="logradouro"
             />
             <div
+              *ngIf="
+                formOrganizacao.get('logradouro')?.invalid &&
+                formOrganizacao.get('logradouro')?.touched
+              "
+              class="text-danger"
+            >
+              <small
+                *ngIf="formOrganizacao.get('logradouro')?.errors?.['required']"
+                >O logradouro é obrigatório.</small
+              >
+            </div>
+          </div>
+
+          <!--Input Numero-->
+
+          <div class="form-group col-3">
+            <label for="numero">Número</label>
+            <input
+              type="text"
+              id="numero"
+              class="form-control"
+              formControlName="numero"
+            />
+            <!--Validação Numero-->
+            <div
+              *ngIf="
+                formOrganizacao.get('numero')?.invalid &&
+                formOrganizacao.get('numero')?.touched
+              "
+              class="text-danger"
+            >
+              <small *ngIf="formOrganizacao.get('numero')?.errors?.['required']"
+                >O número é obrigatório.</small
+              >
+              <small
+                *ngIf="formOrganizacao.get('numero')?.errors?.['minlength']"
+                >O número deve ter no mínimo 2 caracteres.</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--Input Bairro-->
+
+        <div class="row">
+          <div class="form-group col-4">
+            <label for="bairro">Bairro</label>
+            <input
+              type="text"
+              id="bairro"
+              class="form-control"
+              placeholder="Bairro Exemplo"
+              formControlName="bairro"
+            />
+
+            <!--Validação Bairro-->
+            <div
+              *ngIf="
+                formOrganizacao.get('bairro')?.invalid &&
+                formOrganizacao.get('bairro')?.touched
+              "
+              class="text-danger"
+            >
+              <small *ngIf="formOrganizacao.get('bairro')?.errors?.['required']"
+                >O bairro é obrigatório.</small
+              >
+              <small
+                *ngIf="formOrganizacao.get('bairro')?.errors?.['minlength']"
+                >O bairro deve ter no mínimo 5 caracteres.</small
+              >
+            </div>
+          </div>
+
+          <!--Input Cidade-->
+
+          <div class="form-group col-4">
+            <label for="cidade">Cidade</label>
+            <input
+              type="text"
+              id="cidade"
+              class="form-control"
+              placeholder="Cidade Exemplo"
+              formControlName="cidade"
+            />
+            <!--Validação Cidade-->
+            <div
+              *ngIf="
+                formOrganizacao.get('cidade')?.invalid &&
+                formOrganizacao.get('cidade')?.touched
+              "
+              class="text-danger"
+            >
+              <small *ngIf="formOrganizacao.get('cidade')?.errors?.['required']"
+                >A cidade é obrigatório.</small
+              >
+              <small
+                *ngIf="formOrganizacao.get('numero')?.errors?.['minlength']"
+                >A cidade deve ter no mínimo 2 caracteres.</small
+              >
+            </div>
+          </div>
+
+          <!--Input Estado-->
+
+          <div class="form-group col-4">
+            <label for="estado">Estado</label>
+            <input
+              type="text"
+              id="estado"
+              class="form-control"
+              placeholder="ex: São Paulo"
+              formControlName="estado"
+            />
+
+            <!--Validação Estado-->
+            <div
+              *ngIf="
+                formOrganizacao.get('estado')?.invalid &&
+                formOrganizacao.get('estado')?.touched
+              "
+              class="text-danger"
+            >
+              <small *ngIf="formOrganizacao.get('estado')?.errors?.['required']"
+                >O estado é obrigatório.</small
+              >
+              <small
+                *ngIf="formOrganizacao.get('estado')?.errors?.['minlength']"
+                >O estado deve ter no mínimo 2 caracteres.</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--Input CEP-->
+
+        <div class="row">
+          <div class="form-group col-4">
+            <label for="cep">CEP</label>
+            <input
+              type="text"
+              id="cep"
+              class="form-control"
+              placeholder="00000-000"
+              formControlName="cep"
+            />
+
+            <!--Validação Cep-->
+            <div
+              *ngIf="
+                formOrganizacao.get('cep')?.invalid &&
+                formOrganizacao.get('cep')?.touched
+              "
+              class="text-danger"
+            >
+              <small *ngIf="formOrganizacao.get('cep')?.errors?.['required']"
+                >O CEP é obrigatório.</small
+              >
+              <small *ngIf="formOrganizacao.get('cep')?.errors?.['pattern']"
+                >CEP inválido. Formato esperado: 00000-000.</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--Input Chave Pix-->
+
+        <div class="form-group col-12">
+          <label for="chave-pix">Chave-Pix</label>
+          <input
+            type="text"
+            id="chave-pix"
+            class="form-control"
+            formControlName="chavePix"
+          />
+          <div
             *ngIf="
               formOrganizacao.get('chavePix')?.invalid &&
               formOrganizacao.get('chavePix')?.touched
@@ -382,8 +374,6 @@
             <small>O tipo de instituição é obrigatório.</small>
           </div>
         </div>
-          
-        
 
         <!--Input Site-->
 
@@ -556,12 +546,9 @@
               type="submit"
               class="btn btn-enviar"
               [disabled]="formOrganizacao.invalid"
-              
             >
               Enviar
             </button>
-
-           
           </div>
         </div>
       </form>

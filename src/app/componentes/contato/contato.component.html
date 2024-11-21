@@ -1,56 +1,88 @@
-<div class="container-fluid body d-flex align-itens-center ">
+<!--Body Contato-->
+<div class="container-fluid body d-flex align-itens-center">
+
   <!-- Seção da Imagem -->
   <div class="form-logo">
-    <img src="/img/logo.png" alt="Caritá logo" class="logoForm">
+    <img src="/img/logo.png" alt="Caritá logo" class="logoForm" />
   </div>
- 
+
   <!-- Seção do Formulário -->
   <div class="Form">
     <form [formGroup]="ContatoForm">
       <h1 class="text-center mb-4">Formulário de Contato</h1>
+
+      <!--Input Nome-->
       <div class="mb-3">
         <input
-        formControlName="nome"
-        type="text"
-        class="form-control"
-        placeholder="Nome Completo"
-        required>
+          formControlName="nome"
+          type="text"
+          class="form-control"
+          placeholder="Nome Completo"
+          required
+        />
+        <!--Validação Nome-->
         <div
-        *ngIf="ContatoForm.get('nome')?.invalid && ContatoForm.get('nome')?.touched"
-      >
-        <span class="text-danger ">Este campo não pode estar vazio</span>
+          *ngIf="
+            ContatoForm.get('nome')?.invalid && ContatoForm.get('nome')?.touched
+          "
+        >
+          <span class="text-danger">Este campo não pode estar vazio</span>
+        </div>
       </div>
- 
-      </div>
+
+      <!--Input Email-->
       <div class="mb-3">
         <input
-        formControlName="email"
-        type="email"
-        class="form-control"
-        placeholder="Entre com um endereço de email válido"
-        required>
+          formControlName="email"
+          type="email"
+          class="form-control"
+          placeholder="Entre com um endereço de email válido"
+          required
+        />
+
+        <!--Validação Email-->
         <div
-            *ngIf="ContatoForm.get('email')?.invalid && ContatoForm.get('email')?.touched"
-          >
-            <span class="text-danger ">Email Inválido</span>
-          </div>
+          *ngIf="
+            ContatoForm.get('email')?.invalid &&
+            ContatoForm.get('email')?.touched
+          "
+        >
+          <span class="text-danger">Email Inválido</span>
+        </div>
       </div>
+
+      <!--Input mensagem-->
       <div class="mb-3">
         <textarea
-        formControlName="mensagem"
-        class="form-control"
-        rows="5"
-        placeholder="Mensagem..."
-        required>
+          formControlName="mensagem"
+          class="form-control"
+          rows="5"
+          placeholder="Mensagem..."
+          required
+        >
         </textarea>
+
+        <!-- Validação Mensagem-->
         <div
-            *ngIf="ContatoForm.get('mensagem')?.invalid && ContatoForm.get('mensagem')?.touched"
-          >
-            <span class="text-danger ">Mensagem muito curta </span>
-          </div>
+          *ngIf="
+            ContatoForm.get('mensagem')?.invalid &&
+            ContatoForm.get('mensagem')?.touched
+          "
+        >
+          <span class="text-danger">Mensagem muito curta </span>
+        </div>
       </div>
+
+      <!--Botão Submit com validaçao-->
       <div class="d-grid justify-content-center">
-        <button type="submit" class="btn botao" [disabled]="ContatoForm.invalid">Enviar</button>
+        <button
+          type="submit"
+          class="btn botao"
+          [disabled]="ContatoForm.invalid"
+        >
+          Enviar
+        </button>
       </div>
     </form>
   </div>
+</div>
