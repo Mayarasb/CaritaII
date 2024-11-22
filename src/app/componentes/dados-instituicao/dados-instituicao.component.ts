@@ -13,8 +13,8 @@ import { RouterLink } from '@angular/router';
 })
 export class DadosInstituicaoComponent {
 
- 
-  formOrganizacao: FormGroup;
+   formOrganizacao: FormGroup;
+  showAlert = false;
  
 
   constructor(private fb: FormBuilder){
@@ -32,20 +32,21 @@ export class DadosInstituicaoComponent {
       
       chavePix: ['',[Validators.required]],
       site: [''],
-      tipoInstituicao: ['', Validators.required],
+      tipoInstituicao: ['', [Validators.required]],
       anoFundacao: ['', [Validators.required, Validators.pattern(/^\d{4}$/)]],
-      areaAtuacao: ['', Validators.required],
+      areaAtuacao: ['', [Validators.required]],
       descricao: ['', [Validators.required, Validators.maxLength(500)]],
       logo: [null],
       documento: [null],
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.formOrganizacao.valid) {
       console.log('Formulário válido:', this.formOrganizacao.value);
-     
-
+      this.showAlert = true;
+      setTimeout(() => (this.showAlert = false), 4000);
+      this.formOrganizacao.reset();
     } else {
       console.log('Formulário inválido');
     }

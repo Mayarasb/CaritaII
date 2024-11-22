@@ -7,13 +7,14 @@
     <!--Container Login-->
     <div class="login-container">
       <!--Form Campos Login-->
-      <form [formGroup]="myForm" class="login-form p-4">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()"  class="login-form p-4">
         <h2 class="text-center mb-4">Login</h2>
 
         <!--Input Email-->
         <div class="mb-3">
           <input
             formControlName="email"
+            id="email"
             type="email"
             class="form-control"
             placeholder="Insira seu email"
@@ -32,6 +33,7 @@
         <div class="mb-3">
           <input
             formControlName="senha"
+            id="senha"
             type="password"
             class="form-control"
             placeholder="Insira sua senha"
@@ -50,12 +52,8 @@
 
         <!--Botão Entrar-->
         <div class="d-grid gap-2">
-          <button type="submit" (click)="onSubmit()" class="btn btn-primary">
-            <a
-              routerLink="/pagina-preCadastro"
-              class="text-white text-decoration-none"
-              >Entrar</a
-            >
+          <button type="submit"  class="btn btn-primary">
+            Entrar
           </button>
 
           <!--Link para página de Cadastro-->

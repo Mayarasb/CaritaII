@@ -12,6 +12,7 @@ import { RouterLink } from '@angular/router';
 })
 export class DadosRepresentanteParceiroComponent {
   RepresentanteParceirosForm: FormGroup;
+  showAlert = false;
 
   constructor(private fb: FormBuilder) {
     this.RepresentanteParceirosForm = this.fb.group({
@@ -21,17 +22,14 @@ export class DadosRepresentanteParceiroComponent {
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.RepresentanteParceirosForm.valid) {
-      // Exibe um alerta informando que os dados foram enviados
-      alert('Dados enviados com sucesso!');
-
-      // Reinicia o formulário
+      console.log('Formulário válido:', this.RepresentanteParceirosForm.value);
+      this.showAlert = true;
+      setTimeout(() => (this.showAlert = false), 4000);
       this.RepresentanteParceirosForm.reset();
-
-      
-      // Caso o formulário não seja válido, exibe uma mensagem de erro
-      alert('Por favor, preencha os campos corretamente.');
+    } else {
+      console.log('Formulário inválido');
     }
   }
 }

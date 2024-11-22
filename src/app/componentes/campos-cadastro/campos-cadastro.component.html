@@ -9,8 +9,9 @@
       <!--Form com Campos Login-->
       <form
         [formGroup]="myForm"
-        class="cadastro-form p-4"
         (ngSubmit)="onSubmit()"
+        class="cadastro-form p-4"
+        
       >
         <h2 class="text-center mb-4">Cadastro</h2>
 
@@ -70,11 +71,8 @@
         <!--Botão Entrar-->
         <div class="d-grid gap-2">
           <button type="submit" class="btn btn-primary">
-            <a
-              routerLink="/pagina-preCadastro"
-              class="text-white text-decoration-none"
-              >Entrar</a
-            >
+            Cadastrar
+            
           </button>
         </div>
       </form>

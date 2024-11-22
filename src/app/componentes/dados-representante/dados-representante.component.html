@@ -2,7 +2,6 @@
 <div class="container-fluid main-content">
   <!-- Conteudo Página-->
   <div class="page-container">
-
     <!--Sidebar-->
     <div class="sidebar">
       <div class="sidebar-content">
@@ -20,13 +19,18 @@
               routerLink="/pagina-ong"
               class="nav-link active"
               aria-current="page"
-            >Dados Instituição</a>
+              >Dados Instituição</a
+            >
           </li>
           <li class="nav-item">
-            <a routerLink="/pagina-representante" class="nav-link">Dados Representante da Organização</a>
+            <a routerLink="/pagina-representante" class="nav-link"
+              >Dados Representante da Organização</a
+            >
           </li>
           <li class="nav-item">
-            <a routerLink="/pagina-pontosArrecadacao" class="nav-link">Cadastrar Ponto de Arrecadação</a>
+            <a routerLink="/pagina-pontosArrecadacao" class="nav-link"
+              >Cadastrar Ponto de Arrecadação</a
+            >
           </li>
           <li class="nav-item">
             <a routerLink="/pagina-desativarOng" class="nav-link">Desativar</a>
@@ -37,7 +41,11 @@
 
     <!--Reactive Forms-->
     <div class="main-content flex-grow-1">
-      <form [formGroup]="RepresentanteForm" (ngSubmit)="onSubmit()" class="form-content container-fluid">
+      <form
+        [formGroup]="RepresentanteForm"
+        (ngSubmit)="onSubmit()"
+        class="form-content container-fluid"
+      >
         <h2 class="text-center">Dados do Representante</h2>
 
         <!--Input Nome-->
@@ -55,7 +63,12 @@
             />
 
             <!-- Validação Nome -->
-            <div *ngIf="RepresentanteForm.get('nome')?.invalid && RepresentanteForm.get('nome')?.touched">
+            <div
+              *ngIf="
+                RepresentanteForm.get('nome')?.invalid &&
+                RepresentanteForm.get('nome')?.touched
+              "
+            >
               <span class="text-danger">O campo não pode estar vazio</span>
             </div>
           </div>
@@ -75,7 +88,12 @@
             />
 
             <!--Validação CPF-->
-            <div *ngIf="RepresentanteForm.get('CPF')?.invalid && RepresentanteForm.get('CPF')?.touched">
+            <div
+              *ngIf="
+                RepresentanteForm.get('CPF')?.invalid &&
+                RepresentanteForm.get('CPF')?.touched
+              "
+            >
               <span class="text-danger">O CPF deve conter 11 digitos</span>
             </div>
           </div>
@@ -96,7 +114,12 @@
             />
 
             <!-- Validação Email -->
-            <div *ngIf="RepresentanteForm.get('email')?.invalid && RepresentanteForm.get('email')?.touched">
+            <div
+              *ngIf="
+                RepresentanteForm.get('email')?.invalid &&
+                RepresentanteForm.get('email')?.touched
+              "
+            >
               <span class="text-danger">Email Inválido</span>
             </div>
           </div>
@@ -105,29 +128,28 @@
         <!--Termos -->
         <div class="alert col-11">
           <span>
-            Ao atualizar o representante, o novo indicado receberá um e-mail com as instruções para aceitar a responsabilidade. Após a aceitação, todos os acessos administrativos serão concedidos ao novo representante
-            
+            Ao atualizar o representante, o novo indicado receberá um e-mail com
+            as instruções para aceitar a responsabilidade. Após a aceitação,
+            todos os acessos administrativos serão concedidos ao novo
+            representante
           </span>
-          
         </div>
 
-        
         <!-- Button  -->
-        <div class="d-flex justify-content-center">
-          <button type="submit" class="btn btn-enviar" [disabled]="RepresentanteForm.invalid">
-            Alterar
+
+        <div class="d-grid justify-content-center">
+          <button
+            type="submit"
+            class="btn btn-enviar"
+            [disabled]="RepresentanteForm.invalid"
+          >
+            Enviar
           </button>
+
+          <div *ngIf="showAlert" class="alert mt-3 text-center" role="alert">
+            Dados enviados com sucesso!
+          </div>
         </div>
-
-        
-             
-              
-                
-              
-            
-          
-        
-
       </form>
     </div>
   </div>

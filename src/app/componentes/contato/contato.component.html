@@ -8,7 +8,7 @@
 
   <!-- Seção do Formulário -->
   <div class="Form">
-    <form [formGroup]="ContatoForm">
+    <form [formGroup]="ContatoForm"   (ngSubmit)="onSubmit()">
       <h1 class="text-center mb-4">Formulário de Contato</h1>
 
       <!--Input Nome-->
@@ -76,12 +76,20 @@
       <!--Botão Submit com validaçao-->
       <div class="d-grid justify-content-center">
         <button
+        
           type="submit"
           class="btn botao"
           [disabled]="ContatoForm.invalid"
         >
           Enviar
         </button>
+            <div
+      *ngIf="showAlert"
+      class="alert mt-3 text-center"
+      role="alert"
+    >
+      Dados enviados com sucesso!
+    </div>
       </div>
     </form>
   </div>

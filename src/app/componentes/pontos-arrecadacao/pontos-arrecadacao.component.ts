@@ -1,4 +1,4 @@
-import { CommonModule, NgIf } from '@angular/common';
+import { CommonModule} from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class PontosArrecadacaoComponent {
 
   formPontoArrecadacaoOng: FormGroup;
+  showAlert = false;
 
   constructor(private fb: FormBuilder){
     this.formPontoArrecadacaoOng = this.fb.group({
@@ -25,13 +26,17 @@ export class PontosArrecadacaoComponent {
 
     });
   }
-    onSubmit() {
-      if (this.formPontoArrecadacaoOng.valid) {
-        console.log('Formulário válido:', this.formPontoArrecadacaoOng.value);
-      } else {
-        console.log('Formulário inválido');
-      }
+  
+  onSubmit(): void {
+    if (this.formPontoArrecadacaoOng.valid) {
+      console.log('Formulário válido:', this.formPontoArrecadacaoOng.value);
+      this.showAlert = true;
+      setTimeout(() => (this.showAlert = false), 4000);
+      this.formPontoArrecadacaoOng.reset();
+    } else {
+      console.log('Formulário inválido');
     }
+  }
   
 
   addresses: number[] = [];

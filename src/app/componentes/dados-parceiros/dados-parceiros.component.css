@@ -61,3 +61,8 @@
 .btn-enviar:hover {
   background-color: #e67350;
 }
+
+.alert {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-textoAlternativo);
+}

@@ -42,7 +42,7 @@
     <!--Pontos de Arrecadação-->
 
     <div class="main-content flex-grow-1 m-2">
-      <div class="m-2 p-2">
+      <div class="m-4 mb-0 p-2">
         <h2 class="text-center title">Ponto de Arrecadação</h2>
 
         <label
@@ -99,20 +99,20 @@
                 placeholder="Rua Exemplo, 123"
               />
               <div
-              *ngIf="
-                formPontoArrecadacaoOng.get('logradouro')?.invalid &&
-                formPontoArrecadacaoOng.get('logradouro')?.touched
-              "
-              class="text-danger"
-            >
-              <small
-                *ngIf="formPontoArrecadacaoOng.get('logradouro')?.errors?.['required']"
-                >O logradouro é obrigatório.</small
+                *ngIf="
+                  formPontoArrecadacaoOng.get('logradouro')?.invalid &&
+                  formPontoArrecadacaoOng.get('logradouro')?.touched
+                "
+                class="text-danger"
               >
+                <small
+                  *ngIf="formPontoArrecadacaoOng.get('logradouro')?.errors?.['required']"
+                  >O logradouro é obrigatório.</small
+                >
+              </div>
             </div>
-          </div>
 
-             <!--Input Numero-->
+            <!--Input Numero-->
             <div class="form-group col-3">
               <label for="numero">Número</label>
               <input
@@ -270,16 +270,8 @@
           </div>
         </form>
 
-        <!--Botão Salvar Submit-->
+        
         <div class="d-flex gap-2 justify-content-center">
-          <button
-            type="submit"
-            [disabled]="formPontoArrecadacaoOng.invalid"
-            class="btn btn-primary mb-2"
-          >
-            Salvar
-          </button>
-
           <!--Botão Remover-->
           <button (click)="removeAddressForm(i)" class="btn btn-danger mb-2">
             Remover Endereço
@@ -345,10 +337,19 @@
         </div>
 
         <!--Botão Aceitar Termos-->
+
         <div class="text-center">
-          <button type="button" class="btn btn-enviar mb-3">
+          <button
+            type="submit"
+            class="btn btn-enviar mb-3"
+            [disabled]="formPontoArrecadacaoOng.invalid"
+          >
             Aceitar Termos e Continuar
           </button>
+
+          <div *ngIf="showAlert" class="alert mt-3 text-center" role="alert">
+            Dados enviados com sucesso!
+          </div>
         </div>
       </div>
     </div>

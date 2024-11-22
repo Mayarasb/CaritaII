@@ -55,8 +55,11 @@ form textarea {
 }
 
 form button:hover {
-    background-color: #F08F36;
-    color: #FFFFFF;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-textoAlternativo);
 }
 
-
+.alert {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-textoAlternativo);
+}

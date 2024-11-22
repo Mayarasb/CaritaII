@@ -430,17 +430,27 @@
               accept=".pdf,.doc,.docx,.jpg,.png"
               required
             />
-            <small class="form-text text-muted"> ()</small>
+            <small class="form-text text-muted"></small>
           </div>
         </div>
+
 
         <!--Botão Submit-->
-
         <div class="d-flex align-items-center justify-content-center">
           <div class="form-group">
-            <button type="submit" class="btn btn-enviar" [disabled]="formParceiros.invalid">Enviar</button>
+          <button
+            type="submit"
+            class="btn btn-enviar"
+            [disabled]="formParceiros.invalid"
+          >
+            Enviar
+          </button>
+
+          <div *ngIf="showAlert" class="alert mt-3 text-center" role="alert">
+            Dados enviados com sucesso!
           </div>
         </div>
+          </div>
       </form>
     </div>
   </div>

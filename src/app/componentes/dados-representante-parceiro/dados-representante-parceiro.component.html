@@ -137,14 +137,19 @@
         </div>
 
         <!-- Button  -->
-        <div class="d-flex justify-content-center">
+      
+        <div class="d-grid justify-content-center">
           <button
             type="submit"
             class="btn btn-enviar"
             [disabled]="RepresentanteParceirosForm.invalid"
           >
-            Alterar
+            Enviar
           </button>
+
+          <div *ngIf="showAlert" class="alert mt-3 text-center" role="alert">
+            Dados enviados com sucesso!
+          </div>
         </div>
       </form>
     </div>

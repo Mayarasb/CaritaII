@@ -12,6 +12,7 @@ import { RouterLink } from '@angular/router';
 })
 export class DadosRepresentanteComponent {
   RepresentanteForm: FormGroup;
+  showAlert = false;
 
   constructor(private fb: FormBuilder) {
     this.RepresentanteForm = this.fb.group({
@@ -21,9 +22,12 @@ export class DadosRepresentanteComponent {
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.RepresentanteForm.valid) {
       console.log('Formulário válido:', this.RepresentanteForm.value);
+      this.showAlert = true;
+      setTimeout(() => (this.showAlert = false), 4000);
+      this.RepresentanteForm.reset();
     } else {
       console.log('Formulário inválido');
     }

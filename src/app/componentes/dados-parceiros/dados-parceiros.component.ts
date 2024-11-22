@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class DadosParceirosComponent {
   formParceiros: FormGroup;
+  showAlert = false;
 
   constructor(private fb: FormBuilder){
     this.formParceiros = this.fb.group({
@@ -32,9 +33,12 @@ export class DadosParceirosComponent {
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.formParceiros.valid) {
       console.log('Formulário válido:', this.formParceiros.value);
+      this.showAlert = true;
+      setTimeout(() => (this.showAlert = false), 4000);
+      this.formParceiros.reset();
     } else {
       console.log('Formulário inválido');
     }
