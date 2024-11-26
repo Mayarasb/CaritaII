@@ -37,6 +37,7 @@ export class PontosArrecadacaoComponent {
       console.log('Formulário inválido');
     }
   }
+
   
 
   addresses: number[] = [];
