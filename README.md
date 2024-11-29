@@ -1,1 +1,3 @@
-https://drive.google.com/file/d/1A_diZr-4y-pCaj0IoZYiSn11L0SsbppR/view?usp=sharing
+Projeto Integrador do 2º Semestre do curso de Desenvolvimento de Software Multiplataforma - Fatec de Votorantim.
+Projeto Desenvolvido: Caritá
+Desenvolvedores: Ariele Peres, Fernando Ribeiro, Guilherme Pazetti, Guilherme Piva, Mayara Barros e Vanessa Capuano.
