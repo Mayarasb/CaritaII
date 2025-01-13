@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
 export class DadosInstituicaoComponent {
 
    formOrganizacao: FormGroup;
-  showAlert = false;
+  showAlert = false; 
  
 
   constructor(private fb: FormBuilder){
